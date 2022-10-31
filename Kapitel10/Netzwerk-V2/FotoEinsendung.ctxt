@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=autor\ dateiname\ ueberschrift
+comment0.target=FotoEinsendung(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment0.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ FotoEinsendung.\n\ \n\ @param\ autor\ \ \ \ \ \ \ \ \ \ der\ Benutzername\ des\ Einsenders\n\ @param\ dateiname\ \ \ \ \ \ der\ Dateiname\ des\ Bildes\ in\ dieser\ Einsendung\n\ @param\ ueberschrift\ \ \ eine\ \u00DCberschrift\ f\u00FCr\ das\ Bild\n
+comment1.params=
+comment1.target=java.lang.String\ gibBilddateiname()
+comment1.text=\n\ Liefere\ den\ Dateinamen\ des\ Bildes\ aus\ der\ Einsendung.\n\ \n\ @return\ \ den\ Namen\ der\ Bilddatei\n
+comment2.params=
+comment2.target=java.lang.String\ gibUeberschrift()
+comment2.text=\n\ Liefere\ die\ \u00DCberschrift\ des\ Bildes\ aus\ der\ Einsendung.\n\ \n\ @return\ \ die\ \u00DCberschrift\ des\ Bildes\n
+numComments=3

@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=hoehe\ breite
+comment0.target=GitterAnsicht(int,\ int)
+comment0.text=\n\ Erzeuge\ eine\ Ansicht\ mit\ der\ gegebenen\ Breite\ und\ H\u00F6he.\n\ @param\ hoehe\ \ \ die\ H\u00F6he\ der\ Simulation\n\ @param\ breite\ \ die\ Breite\ der\ Simulation\n
+comment1.params=tierklasse\ farbe
+comment1.target=void\ setzeFarbe(java.lang.Class,\ java.awt.Color)
+comment1.text=\n\ Definiere\ eine\ Farbe\ f\u00FCr\ die\ gegebene\ Tierklasse.\n\ @param\ tierklasse\ \ das\ Klassenobjekt\ der\ Tierklasse\n\ @param\ farbe\ \ \ \ \ \ \ die\ zu\ benutzende\ Farbe\ f\u00FCr\ die\ Tierklasse\n
+comment2.params=tierklasse
+comment2.target=java.awt.Color\ gibFarbe(java.lang.Class)
+comment2.text=\n\ @return\ \ die\ definierte\ Farbe\ f\u00FCr\ die\ gegebene\ Tierklasse\n
+comment3.params=schritt\ feld
+comment3.target=void\ zeigeStatus(int,\ Feld)
+comment3.text=\n\ Zeige\ den\ aktuellen\ Zustand\ des\ Feldes.\n\ @param\ schritt\ \ welcher\ Iterationsschritt\ ist\ dies?\n\ @param\ feld\ \ \ \ \ das\ Feld,\ das\ angezeigt\ werden\ soll\n
+comment4.params=feld
+comment4.target=boolean\ istAktiv(Feld)
+comment4.text=\n\ Entscheide,\ ob\ die\ Simulation\ weiterlaufen\ soll.\n\ @return\ true\ \ wenn\ noch\ mehr\ als\ eine\ Spezies\ lebendig\ ist\n
+comment5.params=
+comment5.target=void\ zuruecksetzen()
+comment5.text=\n\ Bereite\ einen\ neuen\ Lauf\ vor.\n
+numComments=6

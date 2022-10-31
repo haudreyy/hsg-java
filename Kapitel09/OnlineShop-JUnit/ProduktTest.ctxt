@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ProduktTest()
+comment0.text=\n\ Standardkonstruktor\ f\u00FCr\ die\ Testklasse\ ProduktTest\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ Setzt\ das\ Testger\u00FCst\ fuer\ den\ Test.\n\n\ Wird\ vor\ jeder\ Testfallmethode\ aufgerufen.\n
+comment2.params=
+comment2.target=void\ tearDown()
+comment2.text=\n\ Abschluss.\n\n\ Wird\ \ nach\ jeder\ Testfallmethode\ aufgerufen.\n
+comment3.params=
+comment3.target=void\ testKommentarHinzufuegen()
+comment3.text=\n\ Teste,\ ob\ ein\ Kommentar\ hinzugef\u00FCgt\ werden\ kann,\ und\ ob\ der\ Kommentarz\u00E4hler\ anschlie\u00DFend\ korrekt\ ist.\n
+comment4.params=
+comment4.target=void\ testUngueltigeBewertung()
+comment4.text=\n\ Teste,\ ob\ ein\ Kommentar\ mit\ illegaler\ Bewertung\ abgelehnt\ wird.\n
+comment5.params=
+comment5.target=void\ testInit()
+comment5.text=\n\ Teste,\ ob\ ein\ Produkt\ korrekt\ initialisiert\ wird\ (Name\ und\ Preis).\n
+comment6.params=
+comment6.target=void\ kommentarHinzufuegen()
+numComments=7
