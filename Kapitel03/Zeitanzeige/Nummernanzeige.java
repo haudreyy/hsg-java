@@ -17,6 +17,7 @@ public class Nummernanzeige
 {
     private int limit;
     private int wert;
+    private int initialwert;
 
     /**
      * Konstruktor für Exemplare der Klasse Nummernanzeige.
