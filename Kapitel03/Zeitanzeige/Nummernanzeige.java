@@ -47,6 +47,11 @@ public class Nummernanzeige
     {
         return wert;
     }
+    
+    public int gibLimit()
+    {
+        return limit;
+    }
 
     public void setzeLimit (int neueLimite)
     {
@@ -128,6 +133,11 @@ public class Nummernanzeige
      */
     public void erhoehen()
     {
-        wert = (wert + 1) % limit;
+        wert = wert + 1;
+        if (wert == limit)
+        {
+            wert = initialwert;
+        }
+        
     }
 }

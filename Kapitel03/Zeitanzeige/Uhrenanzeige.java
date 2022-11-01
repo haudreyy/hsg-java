@@ -77,7 +77,12 @@ public class Uhrenanzeige
             jahre.erhoehen();
         }
         anzeigeAktualisieren();
+    
+    System.out.println ("" + tage.gibWert() + "." + tage.gibLimit());    
     }
+    
+    
+    
 
     /**
      * Setze die Uhrzeit dieser Anzeige auf die gegebene 'stunde' und
