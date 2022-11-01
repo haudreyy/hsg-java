@@ -58,8 +58,21 @@ public class MusikSammlung
      */
     public void alleDateienAusgeben()
     {
-        for(String dateiname : dateien) {
-            System.out.println(dateiname);
+        for (String dateiname : dateien)
+        {
+            System.out.println (dateiname);
+        }
+    }
+    
+    public void alleDateienAusgebenExtra()
+    {
+        int position;
+        position = 0;
+        
+        for (String dateiname : dateien)
+        {
+            position = position +1;
+            System.out.println ("" + dateiname + "," + position);
         }
     }
     

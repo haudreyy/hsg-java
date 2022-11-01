@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=TrackReader
+comment0.text=\n\ Eine\ Hilfsklasse\ f\u00FCr\ unsere\ Musik-Software.\ Diese\ Klasse\ kann\ Dateien\ mit\ einer\ bestimmten\n\ Endung\ aus\ einem\ beliebigen\ Ordner\ des\ Dateisystems\ lesen.\ Sie\ geht\ davon\ aus,\ dass\ der\ Dateiname\n\ den\ Interpreten\ und\ den\ Titel\ enth\u00E4lt.\n\ \n\ Die\ Dateinamen\ der\ Audiotracks\ m\u00FCssen\ daher\ einem\ vorgegebenen\ Standardformat\ folgen\:\ auf\ den\ Namen\n\ des\ Interpreten\ folgt,\ getrennt\ durch\ einen\ Bindestrick\ der\ Track-Titel.\ Zum\ Beispiel\:\ TheBeatles-HereComesTheSun.mp3\n\ \n\ @author\ David\ J.\ Barnes\ und\ Michael\ K\u00F6lling\n\ @version\ 2016.02.29\n
+comment1.params=
+comment1.target=TrackReader()
+comment1.text=\n\ Erzeuge\ einen\ Track-Reader,\ mit\ dem\ Tracks\ aus\ dem\ Musikbibliotheks-Ordner\ gelesen\ werden\ k\u00F6nnen.\n
+comment2.params=ordner\ suffix
+comment2.target=java.util.ArrayList\ liesTracks(java.lang.String,\ java.lang.String)
+comment2.text=\n\ Lies\ Musikdateien\ mit\ der\ angegebenen\ Endung\ aus\ dem\ angegebenen\ Bibliotheksordner.\n\ @param\ ordner\ \ der\ Ordner,\ in\ dem\ nach\ Dateien\ gesucht\ werden\ soll\n\ @param\ suffix\ \ die\ Endung\ f\u00FCr\ den\ Audiotyp\n
+comment3.params=datei
+comment3.target=Track\ dekodiereDetails(java.io.File)
+comment3.text=\n\ Versuche\ die\ Angaben\ zu\ Interpret\ und\ Titel\ aus\ dem\ Dateinamen\ zu\ extrahieren.\n\ Geht\ davon\ aus,\ dass\ der\ Dateiname\ folgendes\ Format\ hat\:\n\ \ \ \ \ interpret-titel.mp3\n\ @param\ datei\ \ die\ Track-Datei\n\ @return\ \ \ \ \ \ \ ein\ Track-Objekt\ mit\ den\ entsprechenden\ Angaben\n
+numComments=4

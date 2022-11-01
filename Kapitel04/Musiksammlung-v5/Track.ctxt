@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Track
+comment0.text=\n\ Speichere\ die\ Details\ von\ Musiktiteln\ (Tracks),\n\ wie\ z.B.\ den\ Interpreten,\ den\ Titel\ und\ den\ Dateinamen.\n\ \n\ @author\ David\ J.\ Barnes\ und\ Michael\ K\u00F6lling\n\ @version\ 2016.02.29\n
+comment1.params=interpret\ titel\ dateiname
+comment1.target=Track(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Track.\n\ @param\ interpret\ \ der\ Interpret\ des\ Titels\n\ @param\ titel\ \ \ \ \ \ der\ Titel\ des\ Tracks\n\ @param\ dateiname\ \ die\ Track-Datei\n
+comment2.params=dateiname
+comment2.target=Track(java.lang.String)
+comment2.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Track.\n\ Geht\ davon\ aus,\ dass\ der\ Dateiname\ nicht\ dekodiert\ werden\ kann,\ um\n\ den\ tats\u00E4chlichen\ Interpreten\ und\ Titel\ zu\ ermitteln.\n\ @param\ dateiname\ \ die\ Track-Datei\ \n
+comment3.params=
+comment3.target=java.lang.String\ gibInterpret()
+comment3.text=\n\ Liefere\ den\ Interpreten.\n\ @return\ \ der\ Interpret\ \n
+comment4.params=
+comment4.target=java.lang.String\ gibTitel()
+comment4.text=\n\ Liefere\ den\ Titel.\n\ @return\ \ der\ Titel\n
+comment5.params=
+comment5.target=java.lang.String\ gibDateiname()
+comment5.text=\n\ Liefere\ den\ Dateinamen.\n\ @return\ \ der\ Dateiname\n
+comment6.params=
+comment6.target=java.lang.String\ gibDetails()
+comment6.text=\n\ Liefere\ Details\ \u00FCber\ den\ Track\:\ Interpret,\ Titel\ und\ Dateiname.\n\ @return\ \ die\ Track-Details\n
+comment7.params=interpret\ titel\ dateiname
+comment7.target=void\ setzeDetails(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment7.text=\n\ Lege\ die\ Details\ des\ Tracks\ fest.\n\ @param\ interpret\ \ der\ Interpret\ des\ Titels\n\ @param\ titel\ \ \ \ \ \ der\ Titel\ des\ Tracks\n\ @param\ dateiname\ \ die\ Track-Datei\ \n
+numComments=8
