@@ -35,7 +35,7 @@ public class Nummernanzeige
      */
     public Nummernanzeige(int intialwert)
     {
-        limit = 0;
+        limit = 9999;
         wert = initialwert;
         this.initialwert = intialwert;
     }
@@ -48,6 +48,11 @@ public class Nummernanzeige
         return wert;
     }
 
+    public void setzeLimit (int neueLimite)
+    {
+        limit = neueLimite;
+    }
+    
     /**
      * Liefere den Anzeigewert, also den Wert dieser Anzeige als
      * einen String mit zwei Ziffern. Wenn der Wert der Anzeige
@@ -94,7 +99,7 @@ public class Nummernanzeige
                 return "0" + wert;
             }
             else {
-                return "0" + wert;
+                return "" + wert;
             }
         }
         
@@ -111,7 +116,8 @@ public class Nummernanzeige
      */
     public void setzeWert(int ersatzwert)
     {
-        if((ersatzwert >= 0) && (ersatzwert < limit)) {
+        if((ersatzwert >= 0) && (ersatzwert < limit)) 
+        {
             wert = ersatzwert;
         }
     }

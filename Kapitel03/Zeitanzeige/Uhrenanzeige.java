@@ -52,9 +52,29 @@ public class Uhrenanzeige
         {
             tage.erhoehen();
         }
-        if (tage.gibWert() == 31 && monate.gibWert () == 1 || 3 || 5 || 7 || 8 ||10 || 12 )
+        if (tage.gibWert() == 1)
         {
             monate.erhoehen();
+            if (monate.gibWert() == 1 || monate.gibWert() == 3 || monate.gibWert() == 5 
+            || monate.gibWert() == 7 || monate.gibWert() == 8 || monate.gibWert() == 10 
+            || monate.gibWert() == 12)
+            {
+                tage.setzeLimit (32);
+            }
+            
+            if (monate.gibWert() == 2)
+            {
+                tage.setzeLimit (28);
+            }
+            
+            else 
+            {
+                tage.setzeLimit (30);
+            }
+        }
+        if (monate.gibWert() == 1)
+        {
+            jahre.erhoehen();
         }
         anzeigeAktualisieren();
     }
@@ -63,10 +83,14 @@ public class Uhrenanzeige
      * Setze die Uhrzeit dieser Anzeige auf die gegebene 'stunde' und
      * 'minute'.
      */
-    public void setzeUhrzeit(int stunde, int minute)
+    public void setzeUhrzeit(int tag, int monat, int jahr, int stunde, int minute)
     {
         stunden.setzeWert(stunde);
         minuten.setzeWert(minute);
+        tage.setzeWert(tag);
+        monate.setzeWert(monat);
+        jahre.setzeWert(jahr);
+        
         anzeigeAktualisieren();
     }
 
@@ -83,7 +107,8 @@ public class Uhrenanzeige
      */
     private void anzeigeAktualisieren()
     {
-        zeitanzeige = stunden.gibAnzeigewert() + ":"
-                      + minuten.gibAnzeigewert();
+        zeitanzeige = tage.gibAnzeigewert(2) + "." + monate.gibAnzeigewert(2) + "." 
+        + jahre.gibAnzeigewert(4) + "  " + stunden.gibAnzeigewert(2) + ":" 
+        + minuten.gibAnzeigewert(2);
     }
 }
