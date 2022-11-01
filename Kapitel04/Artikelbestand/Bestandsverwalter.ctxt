@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Bestandsverwalter
+comment0.text=\n\ Verwalte\ den\ Bestand\ eines\ Unternehmens.\n\ Der\ Bestand\ ist\ beschrieben\ durch\ einen\ oder\n\ mehrere\ Artikel.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment1.params=
+comment1.target=Bestandsverwalter()
+comment1.text=\n\ Initialisiere\ den\ Bestandsverwalter.\n
+comment2.params=artikel
+comment2.target=void\ neuerArtikel(Artikel)
+comment2.text=\n\ F\u00FChre\ einen\ neuen\ Artikel\ im\ Lager\ ein.\n\ @param\ artikel\ \ der\ Artikel,\ der\ neue\ eingef\u00FChrt\ werden\ soll\n
+comment3.params=nummer\ menge
+comment3.target=void\ aufnehmen(int,\ int)
+comment3.text=\n\ Nimm\ eine\ Lieferung\ eines\ Artikels\ in\ das\ Lager\ auf.\n\ Erh\u00F6he\ den\ Lagerbestand\ um\ die\ angegebene\ Menge.\n\ @param\ nummer\ \ die\ Artikelnummer\ des\ Artikels\n\ @param\ menge\ \ \ die\ angelieferte\ Menge\n
+comment4.params=nummer
+comment4.target=Artikel\ findeArtikel(int)
+comment4.text=\n\ Versuche\ einen\ Artikel\ mit\ der\ angegebenen\ Nummer\ im\n\ Bestand\ zu\ finden.\n\ @param\ nummer\ \ die\ Nummer\ des\ zu\ findenden\ Artikels.\n\ @return\ \ \ \ \ \ \ \ den\ gefundenen\ Artikel\ oder\ null,\ falls\ kein\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ passender\ Artikel\ gefunden\ wird.\n
+comment5.params=nummer
+comment5.target=int\ mengeImBestand(int)
+comment5.text=\n\ Finde\ einen\ Artikel\ mit\ der\ angegebenen\ Nummer\ und\n\ liefere\ seine\ aktuelle\ Menge\ im\ Bestand.\n\ Wenn\ die\ Nummer\ auf\ keinen\ Artikel\ passt,\ wird\n\ Null\ zur\u00FCckgeliefert.\n\ @param\ nummer\ \ die\ Nummer\ des\ Artikels\n\ @return\ \ \ \ \ \ \ \ die\ Menge\ des\ Artikels\ im\ Bestand\n
+comment6.params=
+comment6.target=void\ alleArtikelAnzeigen()
+comment6.text=\n\ Informationen\ \u00FCber\ alle\ Artikel\ ausgeben.\n
+numComments=7

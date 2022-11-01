@@ -42,14 +42,20 @@ public class MusikSammlung
      * Gib eine Datei aus der Sammlung auf die Konsole aus.
      * @param index  der Index der Datei, deren Name ausgegeben werden soll
      */
-    public void dateiAusgeben(int index)
+    public String dateiAusgeben(int index)
     {
-        if(index >= 0 && index < dateien.size()) {
+        if(index >= 0 && index < dateien.size()) 
+        {
             String dateiname = dateien.get(index);
             System.out.println(dateiname);
+            return dateiname;
         }
-    }    
-    
+        
+        else 
+        { 
+            return null;
+        }
+    }   
     /**
      * Entferne eine Datei aus der Sammlung.
      * @param index  der Index der zu entfernenden Datei
@@ -77,6 +83,14 @@ public class MusikSammlung
         {
             System.out.println ("Check was negative. Error.");
         }
+    }
+    
+    public void giballMusik ()
+    {
+        System.out.println ("" + dateien.get (0) + "," + dateien.get (1));
+        
+        System.out.println ("" + dateiAusgeben (2));
+        
     }
 
 }

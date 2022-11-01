@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=BestandDemo
+comment0.text=\n\ Demonstriert\ die\ Klassen\ Bestandsverwalter\ und\ Artikel.\n\ Die\ Demonstration\ wird\ funktionst\u00FCchtig,\ indem\ die\n\ Klasse\ Bestandsverwalter\ vervollst\u00E4ndigt\ wird.\n\ \n\ @author\ David\ J.\ Barnes\ und\ Michael\ K\u00F6lling\n\ @version\ 2016.02.29\n
+comment1.params=
+comment1.target=BestandDemo()
+comment1.text=\n\ Erzeuge\ einen\ Bestandsverwalter\ und\ f\u00FCttere\ ihn\ mit\n\ ein\ paar\ Beispielartikeln.\n
+comment2.params=
+comment2.target=void\ demo()
+comment2.text=\n\ Eine\ sehr\ einfache\ Demonstration,\ wie\ ein\ Bestandsverwalter\n\ benutzt\ werden\ k\u00F6nnte.\ Informationen\ zu\ allen\ Artikeln\ werden\n\ angezeigt,\ die\ Bestandsmenge\ eines\ Artikels\ wird\ aufgestockt\n\ und\ anschlie\u00DFend\ werden\ erneut\ alle\ Artikel\ angezeigt.\n
+comment3.params=nummer
+comment3.target=void\ zeigeDetails(int)
+comment3.text=\n\ Zeige\ Details\ eines\ bestimmten\ Artikels.\n\ Wenn\ vorhanden,\ werden\ Name\ und\ Bestandsmenge\n\ angezeigt.\n\ @param\ nummer\ \ die\ Nummer\ des\ zu\ suchenden\ Artikels\n
+comment4.params=nummer
+comment4.target=void\ verkaufeArtikel(int)
+comment4.text=\n\ Verkaufe\ ein\ Exemplar\ eines\ bestimmten\ Artikels.\n\ Zeige\ den\ Status\ des\ Artikels\ vor\ und\ nach\ dem\ \n\ Verkauf.\n\ @param\ nummer\ \ die\ Nummer\ des\ verkauften\ Artikels\n
+comment5.params=nummer
+comment5.target=Artikel\ gibArtikel(int)
+comment5.text=\n\ Hole\ den\ Artikel\ mit\ der\ angegebenen\ Nummer\ vom\ \n\ Verwalter.\n\ Eine\ Fehlermeldung\ wird\ ausgegeben,\ wenn\ kein\n\ Artikel\ mit\ dieser\ Nummer\ existiert.\n\ @param\ nummer\ \ die\ Nummer\ des\ Artikels\n\ @return\ \ \ \ \ \ \ \ den\ Artikel\ oder\ null,\ wenn\ nicht\ gefunden\ wird\n
+comment6.params=
+comment6.target=Bestandsverwalter\ gibVerwalter()
+comment6.text=\n\ @return\ \ den\ Bestandsverwalter\n
+numComments=7

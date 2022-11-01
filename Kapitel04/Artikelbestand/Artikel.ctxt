@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Artikel
+comment0.text=\n\ Modelliert\ Informationen\ zu\ einem\ Artikel,\ der\ von\n\ einer\ Firma\ verkauft\ wird.\n\ \n\ @author\ David\ J.\ Barnes\ und\ Michael\ K\u00F6lling\n\ @version\ 2016.02.29\n
+comment1.params=nummer\ name
+comment1.target=Artikel(int,\ java.lang.String)
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Artikel.\n\ Der\ Anfangsbestand\ ist\ Null.\n\ @param\ nummer\ \ die\ Artikelnummer\ des\ Artikels\n\ @param\ name\ \ \ \ der\ Name\ des\ Artikels\n
+comment2.params=
+comment2.target=int\ gibNummer()
+comment2.text=\n\ @return\ \ die\ Artikelnummer\n
+comment3.params=
+comment3.target=java.lang.String\ gibName()
+comment3.text=\n\ @return\ \ den\ Artikelnamen\n
+comment4.params=
+comment4.target=int\ gibBestand()
+comment4.text=\n\ @return\ \ den\ Bestand\ im\ Lager\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\n\ @return\ \ die\ Nummer,\ den\ Namen\ und\ den\ Lagerbestand\ als\ String\n
+comment6.params=anzahl
+comment6.target=void\ erhoeheBestand(int)
+comment6.text=\n\ Erh\u00F6he\ den\ Lagerbestand\ dieses\ Artikels\ um\ den\ \n\ angegebenen\ Wert.\n\ @param\ anzahl\ \ die\ Anzahl\ der\ zus\u00E4tzlichen\ Artikel\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dieser\ Wert\ muss\ gr\u00F6\u00DFer\ als\ Null\ sein\n
+comment7.params=
+comment7.target=void\ verkaufeEinen()
+comment7.text=\n\ Verkaufe\ einen\ dieser\ Artikel.\n\ Ein\ Fehler\ wird\ gemeldet,\ wenn\ der\ Artikel\ nicht\ auf\n\ Lager\ ist.\n
+numComments=8
