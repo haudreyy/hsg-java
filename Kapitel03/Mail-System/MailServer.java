@@ -49,11 +49,11 @@ public class MailServer
      */
     public Nachricht gibNaechsteNachrichtFuer(String benutzer)
     {
-        Iterator<Nachricht> it = nachrichten.iterator();
-        while(it.hasNext()) {
-            Nachricht nachricht = it.next();
+        Iterator<Nachricht> iterator = nachrichten.iterator();
+        while(iterator.hasNext()) {
+            Nachricht nachricht = iterator.next();
             if(nachricht.gibEmpfaenger().equals(benutzer)) {
-                it.remove();
+                iterator.remove();
                 return nachricht;
             }
         }
