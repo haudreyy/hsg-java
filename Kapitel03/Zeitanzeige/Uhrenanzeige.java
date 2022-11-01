@@ -17,31 +17,24 @@ public class Uhrenanzeige
 {
     private Nummernanzeige stunden;
     private Nummernanzeige minuten;
+    private Nummernanzeige tage;
+    private Nummernanzeige monate;
+    private Nummernanzeige jahre;
     private String zeitanzeige;    // simuliert die tatsächliche Anzeige
     
     /**
-     * Konstruktor für ein Exemplar von Uhrenanzeige.
-     * Mit diesem Konstruktor wird die Anzeige auf 00:00 initialisiert.
+     * Konstruktor für Uhrm wo man Initialwert und, wenn vorhanden Limite eingibt
      */
     public Uhrenanzeige()
     {
-        stunden = new Nummernanzeige(24);
-        minuten = new Nummernanzeige(60);
+        stunden = new Nummernanzeige(24,0);
+        minuten = new Nummernanzeige(60,0);
+        tage = new Nummernanzeige (32,1);
+        monate = new Nummernanzeige (13,1);
+        jahre = new Nummernanzeige (2000);
         anzeigeAktualisieren();
     }
 
-    /**
-     * Konstruktor für ein Exemplar von Uhrenanzeige.
-     * Mit diesem Konstruktor wird die Anzeige auf den Wert
-     * initialisiert, der durch 'stunde' und 'minute' 
-     * definiert ist.
-     */
-    public Uhrenanzeige(int stunde, int minute)
-    {
-        stunden = new Nummernanzeige(24);
-        minuten = new Nummernanzeige(60);
-        setzeUhrzeit(stunde, minute);
-    }
 
     /**
      * Diese Operation sollte einmal pro Minute aufgerufen werden -
@@ -51,8 +44,17 @@ public class Uhrenanzeige
     public void taktsignalGeben()
     {
         minuten.erhoehen();
-        if(minuten.gibWert() == 0) {  // Limit wurde erreicht!
+        if(minuten.gibWert() == 0) 
+        {  // Limit von minuten wurde erreicht!
             stunden.erhoehen();
+        }
+        if (stunden.gibWert() == 0)
+        {
+            tage.erhoehen();
+        }
+        if (tage.gibWert() == 31 && monate.gibWert () == 1 || 3 || 5 || 7 || 8 ||10 || 12 )
+        {
+            monate.erhoehen();
         }
         anzeigeAktualisieren();
     }

@@ -23,10 +23,21 @@ public class Nummernanzeige
      * Konstruktor für Exemplare der Klasse Nummernanzeige.
      * Setzt das Limit, bei dem die Anzeige zurückgesetzt wird.
      */
-    public Nummernanzeige(int anzeigeLimit)
+    public Nummernanzeige(int anzeigeLimit, int intialwert)
     {
         limit = anzeigeLimit;
-        wert = 0;
+        wert = initialwert;
+        this.initialwert = intialwert;
+    }
+    
+    /**
+     * Zweiter Konstruktor, falls kein Limit wie bei Jahren
+     */
+    public Nummernanzeige(int intialwert)
+    {
+        limit = 0;
+        wert = initialwert;
+        this.initialwert = intialwert;
     }
 
     /**
@@ -43,13 +54,53 @@ public class Nummernanzeige
      * kleiner als zehn ist, wird die Anzeige mit einer führenden
      * Null eingerückt.
      */
-    public String gibAnzeigewert()
+    public String gibAnzeigewert(int länge)
     {
-        if(wert < 10) {
-            return "0" + wert;
+        if (länge == 2) // für Stunden, Minuten und Tage
+        { if (wert < 10) 
+            {
+                return "0" +wert;
+            }
+            else {
+                return "" + wert;
+            }
         }
-        else {
-            return "" + wert;
+        
+        else if (länge == 3) 
+        { if (wert < 10) 
+            {
+                return "00" +wert;
+            }
+            else if (wert < 100) 
+            {
+                return "0" + wert;
+            }
+            else {
+                return "" + wert;
+            }
+        }
+        
+        else if (länge == 4)
+        { if (wert < 10) 
+            {
+                return "000" +wert;
+            }
+            else if (wert < 100) 
+            {
+                return "00" + wert;
+            }
+            else if (wert < 1000)
+            {
+                return "0" + wert;
+            }
+            else {
+                return "0" + wert;
+            }
+        }
+        
+        else 
+        {
+        return "" + wert;
         }
     }
 
