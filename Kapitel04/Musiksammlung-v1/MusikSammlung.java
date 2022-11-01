@@ -60,5 +60,23 @@ public class MusikSammlung
             dateien.remove(index);
         }
     }
+    
+    public void drittletzteDateientfernen ()
+    {
+        dateien.remove (gibAnzahlDateien()-3);
+    }
+    
+    public void checkIndex (int index)
+    {
+        if (index >= 0 && index < dateien.size()-1)
+        {
+            System.out.println ("Check was positive. No error.");
+        }
+        
+        else 
+        {
+            System.out.println ("Check was negative. Error.");
+        }
+    }
 
 }

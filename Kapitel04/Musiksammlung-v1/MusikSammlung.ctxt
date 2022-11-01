@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=MusikSammlung
+comment0.text=\n\ Eine\ Klasse\ zur\ Verwaltung\ von\ Audiodateien.\n\ \n\ @author\ David\ J.\ Barnes\ und\ Michael\ K\u00F6lling.\n\ @version\ 2016.02.29\n
+comment1.params=
+comment1.target=MusikSammlung()
+comment1.text=\n\ Erzeuge\ eine\ MusikSammlung.\n
+comment2.params=dateiname
+comment2.target=void\ dateiHinzufuegen(java.lang.String)
+comment2.text=\n\ F\u00FCge\ der\ Sammlung\ eine\ Datei\ hinzu.\n\ @param\ \ dateiname\ die\ hinzuzuf\u00FCgende\ Datei\n
+comment3.params=
+comment3.target=int\ gibAnzahlDateien()
+comment3.text=\n\ Liefere\ die\ Anzahl\ der\ Dateien\ in\ dieser\ Sammlung.\n\ @return\ \ die\ Anzahl\ der\ Dateien\ in\ dieser\ Sammlung\n
+comment4.params=index
+comment4.target=void\ dateiAusgeben(int)
+comment4.text=\n\ Gib\ eine\ Datei\ aus\ der\ Sammlung\ auf\ die\ Konsole\ aus.\n\ @param\ index\ \ der\ Index\ der\ Datei,\ deren\ Name\ ausgegeben\ werden\ soll\n
+comment5.params=index
+comment5.target=void\ entferneDatei(int)
+comment5.text=\n\ Entferne\ eine\ Datei\ aus\ der\ Sammlung.\n\ @param\ index\ \ der\ Index\ der\ zu\ entfernenden\ Datei\n
+comment6.params=
+comment6.target=void\ drittletzteDateientfernen()
+comment7.params=index
+comment7.target=void\ checkIndex(int)
+numComments=8
