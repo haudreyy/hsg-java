@@ -21,6 +21,11 @@ public class Fabrik
         bestellzaehler = 0;
         bestellungen = new ArrayList<Bestellung>();
     }
+
+    public static void main(String[] args)
+    {
+        Fabrik fabrik = new Fabrik ();
+    }
     
     public void bestellungAufgeben (int stuehle, int sofas)
     {
