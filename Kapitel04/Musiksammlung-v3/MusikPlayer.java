@@ -148,4 +148,15 @@ public class MusikPlayer
         System.out.println("Es gab ein Problem beim Abspielen von: " + dateiname);
     }
 
+    public void sum (int start, int end)
+    {
+        int nmbr;
+        nmbr = 0;
+        while (start <= end) 
+        {
+            nmbr = nmbr + start;
+            start ++;
+            System.out.println (nmbr);
+        }
+    }
 }
