@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Sofa
+comment0.text=\n\ Die\ Klasse\ Sofa\ erm\u00F6glicht\ die\ ben\u00F6tigten\ Produktionseinheiten\ und\ die\ totale\ Zeit\ abzufragen.\n\ \n\ @author\ Gruppe\ 7\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=int\ gibHolzeinheiten()
+comment2.params=
+comment2.target=int\ gibSchrauben()
+comment3.params=
+comment3.target=int\ gibFarbeinheiten()
+comment4.params=
+comment4.target=int\ gibKissen()
+comment5.params=
+comment5.target=int\ gibKartoneinheiten()
+comment6.params=
+comment6.target=int\ gibProduktionszeit()
+numComments=7

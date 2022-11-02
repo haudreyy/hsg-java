@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Produkt
+comment0.text=\n\ Die\ abstrakte\ Klasse\ Produkt\ erm\u00F6glicht\ die\ Vererbung\ von\ Methoden\ durch\ konkrete\ Produkte.\n\ \n\ @author\ Gruppe\ 7\n\ @version\ 1.0\n
+comment1.params=neuerZustand
+comment1.target=void\ zustandAendern(int)
+comment2.params=
+comment2.target=int\ aktuellerZustand()
+numComments=3

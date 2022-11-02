@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Posten
+comment0.text=\n\ Eine\ Klasse,\ die\ die\ Posten\ in\ einer\ Auktion\ modelliert.\n\ Ein\ Posten\ kann\ ein\ einzelner\ Gegenstand\ oder\ eine\ \n\ Zusammenstellung\ von\ Gegenst\u00E4nden\ sein.\n\n\ @author\ David\ J.\ Barnes\ und\ Michael\ K\u00F6lling.\n\ @version\ 2016.02.29\n
+comment1.params=nummer\ beschreibung
+comment1.target=Posten(int,\ java.lang.String)
+comment1.text=\n\ Erzeuge\ einen\ Posten,\ mit\ Nummer\ und\ Beschreibung.\n\ @param\ nummer\ \ \ \ \ \ \ \ die\ Postennummer\n\ @param\ beschreibung\ \ eine\ Beschreibung\ dieses\ Postens\n
+comment2.params=gebot
+comment2.target=boolean\ hoeheresGebot(Gebot)
+comment2.text=\n\ Ein\ Versuch,\ f\u00FCr\ diesen\ Posten\ zu\ bieten.\ Ein\ erfolgreiches\n\ Gebot\ muss\ h\u00F6her\ sein\ als\ alle\ bisherigen\ Gebote.\n\ @param\ gebot\ \ ein\ neues\ Gebot\n\ @return\ true\ \ falls\ erfolgreich,\ false\ sonst\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\n\ @return\ \ eine\ String-Darstellung\ der\ Details\ dieses\ Postens\n
+comment4.params=
+comment4.target=int\ gibNummer()
+comment4.text=\n\ @return\ \ die\ Nummer\ dieses\ Postens\n
+comment5.params=
+comment5.target=java.lang.String\ gibBeschreibung()
+comment5.text=\n\ @return\ \ die\ Beschreibung\ dieses\ Postens\n
+comment6.params=
+comment6.target=Gebot\ gibHoechstesGebot()
+comment6.text=\n\ Liefere\ das\ h\u00F6chste\ Gebot\ f\u00FCr\ diesen\ Posten.\n\ Das\ Ergebnis\ kann\ 'null'\ sein,\ wenn\ noch\ kein\n\ Gebot\ abgegeben\ wurde.\n\ @return\ \ das\ h\u00F6chste\ Gebot\n
+numComments=7

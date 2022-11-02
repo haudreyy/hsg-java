@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Person
+comment0.text=\n\ Modellierung\ von\ Personen,\ die\ an\ einer\n\ Auktion\ teilnehmen.\n\ \n\ @author\ David\ J.\ Barnes\ und\ Michael\ K\u00F6lling.\n\ @version\ 2016.02.29\n
+comment1.params=name
+comment1.target=Person(java.lang.String)
+comment1.text=\n\ Erzeuge\ eine\ neue\ Person\ mit\ dem\ angegebenen\ Namen.\n\ @param\ name\ \ der\ Name\ der\ Person\n
+comment2.params=
+comment2.target=java.lang.String\ gibName()
+comment2.text=\n\ @return\ \ den\ Namen\ der\ Person\n
+numComments=3

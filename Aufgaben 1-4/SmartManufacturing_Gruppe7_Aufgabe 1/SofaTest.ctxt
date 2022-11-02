@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=SofaTest
+comment0.text=\n\ Die\ Test-Klasse\ SofaTest.\n\n\ @author\ \ Gruppe\ 7\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=void\ setUp()
+comment2.params=
+comment2.target=void\ testeProduktionsZeit()
+comment3.params=
+comment3.target=void\ tearDown()
+numComments=4

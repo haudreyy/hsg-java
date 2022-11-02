@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Auktion
+comment0.text=\n\ Ein\ einfaches\ Modell\ einer\ Auktion.\n\ Ein\ Exemplar\ dieser\ Klasse\ h\u00E4lt\ eine\ Liste\ von\ Posten,\n\ die\ beliebig\ lang\ werden\ kann.\n\ \n\ @author\ David\ J.\ Barnes\ und\ Michael\ K\u00F6lling\n\ @version\ 2016.02.29\n
+comment1.params=
+comment1.target=Auktion()
+comment1.text=\n\ Erzeuge\ eine\ neue\ Auktion.\n
+comment2.params=beschreibung
+comment2.target=void\ postenAnmelden(java.lang.String)
+comment2.text=\n\ Melde\ einen\ Posten\ f\u00FCr\ diese\ Auktion\ an.\n\ @param\ beschreibung\ \ die\ Beschreibung\ des\ Postens\n
+comment3.params=
+comment3.target=void\ zeigePostenliste()
+comment3.text=\n\ Zeige\ die\ komplette\ Liste\ der\ Posten\ dieser\ Auktion.\n
+comment4.params=postennummer\ bieter\ betrag
+comment4.target=void\ gibGebotAb(int,\ Person,\ long)
+comment4.text=\n\ Gebe\ f\u00FCr\ einen\ Posten\ ein\ Angebot\ ab.\n\ Es\ erfolgt\ eine\ Ausgabe,\ ob\ das\ Gebot\ erfolgreich\ war\ oder\ nicht.\n\ @param\ postennummer\ \ der\ Posten,\ f\u00FCr\ den\ geboten\ wird\n\ @param\ bieter\ \ die\ Person,\ die\ bietet\n\ @param\ betrag\ \ die\ H\u00F6he\ des\ Gebots\n
+comment5.params=nummer
+comment5.target=Posten\ gibPosten(int)
+comment5.text=\n\ Liefere\ den\ Posten\ mit\ der\ angegebenen\ Nummer.\n\ Liefere\ 'null',\ wenn\ ein\ Posten\ mit\ dieser\ Nummer\n\ nicht\ existiert.\n\ @param\ nummer\ \ die\ Nummer\ des\ Postens,\ der\ geliefert\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ werden\ soll\n
+numComments=6

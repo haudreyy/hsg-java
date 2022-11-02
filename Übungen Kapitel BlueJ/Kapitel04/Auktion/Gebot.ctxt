@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Gebot
+comment0.text=\n\ Eine\ Klasse,\ die\ Gebote\ in\ einer\ Auktion\ modelliert.\n\ Ein\ Gebot\ enth\u00E4lt\ eine\ Referenz\ auf\ die\ Person,\ die\n\ das\ Gebot\ abgegeben\ hat,\ und\ die\ H\u00F6he\ des\ Gebots.\n\ \n\ @author\ David\ J.\ Barnes\ und\ Michael\ K\u00F6lling.\n\ @version\ 2016.02.29\n
+comment1.params=bieter\ hoehe
+comment1.target=Gebot(Person,\ long)
+comment1.text=\n\ Erzeuge\ ein\ Gebot.\n\ @param\ bieter\ \ die\ Person,\ die\ das\ Gebot\ abgibt\n\ @param\ hoehe\ \ \ die\ H\u00F6he\ des\ Gebots\n
+comment2.params=
+comment2.target=Person\ gibBieter()
+comment2.text=\n\ Liefere\ den\ Bieter\ dieses\ Gebots.\n\ @return\ \ den\ Bieter\n
+comment3.params=
+comment3.target=long\ gibHoehe()
+comment3.text=\n\ Liefere\ die\ H\u00F6he\ dieses\ Gebots.\n\ @return\ \ die\ H\u00F6he\ dieses\ Gebots\n
+numComments=4

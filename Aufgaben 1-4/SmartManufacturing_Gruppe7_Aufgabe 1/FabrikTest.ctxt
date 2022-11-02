@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=FabrikTest
+comment0.text=\n\ Die\ Test-Klasse\ FabrikTest.\n\n\ @author\ \ Gruppe\ 7\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=void\ setUp()
+comment2.params=
+comment2.target=void\ testeFabrikErstellung()
+comment3.params=
+comment3.target=void\ testeBestellungAufgeben()
+comment4.params=
+comment4.target=void\ testeBestellungenAusgeben()
+comment5.params=
+comment5.target=void\ tearDown()
+numComments=6

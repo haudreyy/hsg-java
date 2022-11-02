@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Bestellung
+comment0.text=\n\ Die\ Klasse\ Bestellung\ erm\u00F6glicht\ Informationen\ \u00FCber\ diese\ zu\ erfassen\ und\ mit\ der\ Bestellung\ umzugehen.\n\ \n\ @author\ Gruppe\ 7\n\ @version\ 1.0\n
+comment1.params=bestellteSofas\ bestellteStuehle
+comment1.target=Bestellung(int,\ int)
+comment2.params=
+comment2.target=void\ bestellungBestaetigen()
+comment3.params=neueBeschaffungsZeit
+comment3.target=void\ setzeBeschaffungsZeit(int)
+comment4.params=
+comment4.target=boolean\ gibBestellBestaetigung()
+comment5.params=
+comment5.target=int\ gibBeschaffungsZeit()
+comment6.params=
+comment6.target=long\ gibBestellungsNr()
+comment7.params=
+comment7.target=int\ gibAnzahlStuehle()
+comment8.params=
+comment8.target=int\ gibAnzahlSofas()
+numComments=9
