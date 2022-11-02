@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Bestellung
+comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Bestellung.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment1.params=stuehle\ sofas\ nummer
+comment1.target=Bestellung(int,\ int,\ int)
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Bestellung\n
+comment2.params=
+comment2.target=java.lang.String\ gibBestellbestaetigung()
+comment2.text=\n\ Ein\ Beispiel\ einer\ Methode\ -\ ersetzen\ Sie\ diesen\ Kommentar\ mit\ Ihrem\ eigenen\n\ \n\ @param\ \ y\ \ \ \ ein\ Beispielparameter\ f\u00FCr\ eine\ Methode\n\ @return\ \ \ \ \ \ \ \ die\ Summe\ aus\ x\ und\ y\n
+comment3.params=
+comment3.target=int\ gibBestellnummer()
+comment4.params=
+comment4.target=int\ gibBeschaffungszeit()
+comment5.params=
+comment5.target=int\ gibAnzahlStuehle()
+comment6.params=
+comment6.target=int\ gibAnzahlSofa()
+numComments=7
