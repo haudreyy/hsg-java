@@ -98,15 +98,6 @@ public class MusikSammlung
         System.out.println();
     }
     
-    public void alleTracksausgeben1()
-    {
-        
-        for (int i = 0; i < gibAnzahlTracks();i++)
-        {
-            
-        }
-    }
-    
     public void alleTracksAusgebenV2()
     {
         System.out.println("Track-Liste: ");
