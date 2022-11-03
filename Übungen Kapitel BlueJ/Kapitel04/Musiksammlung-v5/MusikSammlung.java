@@ -31,6 +31,8 @@ public class MusikSammlung
         System.out.println();
     }
 
+    
+    
     /**
      * Füge der Sammlung eine Track-Datei hinzu.
      * @param dateiname  der Dateiname des hinzuzufügenden Tracks
@@ -94,6 +96,15 @@ public class MusikSammlung
             System.out.println(track.gibDetails());
         }
         System.out.println();
+    }
+    
+    public void alleTracksausgeben1()
+    {
+        
+        for (int i = 0; i < gibAnzahlTracks();i++)
+        {
+            
+        }
     }
     
     public void alleTracksAusgebenV2()
