@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Auswerter
+comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Stunden.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Stunden\n
+comment2.params=anzahlZugriff\ inStunde
+comment2.target=void\ eingabeZugriffinStunde(int,\ int)
+comment2.text=\n\ Werte\ dem\ Array\ zuordnen\n
+numComments=3

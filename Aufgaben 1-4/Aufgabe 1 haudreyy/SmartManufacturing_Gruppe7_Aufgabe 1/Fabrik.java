@@ -20,6 +20,7 @@ public class Fabrik
         // Instanzvariable initialisieren
         bestellzaehler = 0;
         bestellungen = new ArrayList<Bestellung>();
+        System.out.println("Fabrik erstellt");
     }
 
     public static void main(String[] args)
