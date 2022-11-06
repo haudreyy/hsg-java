@@ -66,12 +66,11 @@ public class Lager
     {
         int sofas = bestellung.gibAnzahlSofa();
         int stuehle = bestellung.gibAnzahlStuehle();
-        boolean genug = true;
+        
         int holzbedarf = Stuhl.gibHolz() * stuehle + Sofa.gibHolz() * sofas;
 
         private int [] bedarf_je_material = {holzbedarf, schraubenbedarf, ......}};
-        ///
-
+        boolean genug = true;
         for(int i =0 ; i < lagerbestand.length; i++)
         {
             int bedarf = bedarf_je_material [i];
