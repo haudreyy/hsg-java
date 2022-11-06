@@ -13,7 +13,7 @@ public class Bestellung
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private ArrayList <Produkt> produkte;
     private String bestellbestaetigung;
-    private int beschaffungszeit;
+    private int herstellungszeit;
     private int bestellnummer;
     private int anzahlStuehle;
     private int anzahlSofa;
@@ -25,7 +25,7 @@ public class Bestellung
     {
         anzahlStuehle = stuehle;
         anzahlSofa = sofas;
-        beschaffungszeit = sofas * Sofa.gibZeit() + stuehle * Stuhl.gibZeit();
+        herstellungszeit = sofas * Sofa.gibZeit() + stuehle * Stuhl.gibZeit();
         bestellnummer = nummer;
         bestellbestaetigung = "Bestellung wurde erfolgreich aufgenommen!";
         produkte = new ArrayList<Produkt>();
@@ -65,9 +65,9 @@ public class Bestellung
         return bestellnummer;
     }
     
-    public int gibBeschaffungszeit()
+    public int gibHerstellungszeit()
     {
-        return beschaffungszeit;
+        return herstellungszeit;
     }
     
     public int gibAnzahlStuehle()
