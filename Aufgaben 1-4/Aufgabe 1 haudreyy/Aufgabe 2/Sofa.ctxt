@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Sofa
+comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Sofa.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment1.params=
+comment1.target=int\ gibHolz()
+comment2.params=
+comment2.target=int\ gibKissen()
+comment3.params=
+comment3.target=int\ gibSchrauben()
+comment4.params=
+comment4.target=int\ gibFarbe()
+comment5.params=
+comment5.target=int\ gibKarton()
+comment6.params=
+comment6.target=int\ gibZeit()
+comment7.params=
+comment7.target=Sofa()
+comment7.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Sofa\n
+numComments=8

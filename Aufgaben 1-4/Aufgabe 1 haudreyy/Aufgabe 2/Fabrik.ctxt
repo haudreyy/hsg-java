@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Fabrik
+comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Fabrik.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment1.params=
+comment1.target=Fabrik()
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Fabrik\n
+comment2.params=args
+comment2.target=void\ main(java.lang.String[])
+comment3.params=stuehle\ sofas
+comment3.target=void\ bestellungAufgeben(int,\ int)
+comment4.params=
+comment4.target=void\ bestellungenAusgeben()
+numComments=5
