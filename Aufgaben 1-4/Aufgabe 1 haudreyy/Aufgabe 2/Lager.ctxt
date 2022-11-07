@@ -1,10 +1,14 @@
 #BlueJ class context
 comment0.target=Lager
-comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Lager.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
-comment1.params=
-comment1.target=Lager()
+comment0.text=\n\ \ \ \ \ \ \ \ Holz(0),\n\ \ \ \ \ \ \ \ Schrauben(1),\n\ \ \ \ \ \ \ \ Farbe,\n\ \ \ \ \ \ \ \ Kissen,\n\ \ \ \ \ \ \ \ Karton\n
+comment1.params=holzeinheiten\ schrauben\ farbeinheiten\ kissen\ karton
+comment1.target=Lager(int,\ int,\ int,\ int,\ int)
 comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Lager\n
-comment2.params=y
-comment2.target=int\ beispielMethode(int)
+comment2.params=
+comment2.target=void\ gibLagerbestand()
 comment2.text=\n\ Ein\ Beispiel\ einer\ Methode\ -\ ersetzen\ Sie\ diesen\ Kommentar\ mit\ Ihrem\ eigenen\n\ \n\ @param\ \ y\ \ \ \ ein\ Beispielparameter\ f\u00FCr\ eine\ Methode\n\ @return\ \ \ \ \ \ \ \ die\ Summe\ aus\ x\ und\ y\n
-numComments=3
+comment3.params=rohstoff
+comment3.target=int\ gibLagerbestand(int)
+comment4.params=bestellung
+comment4.target=int\ gibBeschaffungszeit(Bestellung)
+numComments=5

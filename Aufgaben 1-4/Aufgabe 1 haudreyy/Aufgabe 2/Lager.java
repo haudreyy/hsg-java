@@ -68,22 +68,40 @@ public class Lager
         int stuehle = bestellung.gibAnzahlStuehle();
         
         int holzbedarf = Stuhl.gibHolz() * stuehle + Sofa.gibHolz() * sofas;
+        int schraubenbedarf = Stuhl.gibSchrauben() * stuehle + Sofa.gibSchrauben() * sofas;
+        int farbbedarf = Stuhl.gibFarbe() * stuehle + Sofa.gibFarbe() * sofas;
+        int kissenbedarf = Sofa.gibKissen() * sofas;
+        int kartonbedarf = Stuhl.gibKarton() * stuehle + Sofa.gibKarton() * sofas;
 
-        private int [] bedarf_je_material = {holzbedarf, schraubenbedarf, ......}};
+        int [] bedarf_je_material = {holzbedarf, schraubenbedarf,farbbedarf,kissenbedarf,kartonbedarf};
+
+        System.out.println (lagerbestand [0]);
+        System.out.println (lagerbestand [1]);
+        System.out.println (lagerbestand [2]);
+        System.out.println (lagerbestand [3]);
+        System.out.println (lagerbestand [4]);
+
         boolean genug = true;
         for(int i =0 ; i < lagerbestand.length; i++)
         {
             int bedarf = bedarf_je_material [i];
             int bestand = lagerbestand [i];
-            if (bestand < bedarf)
-            {genug = false;}
-        }
-        for (int bestand : lagerbestand) {
             
+            if (bestand < bedarf)
+            {genug = true;}
+            else {genug = false;}
+            
+            System.out.println ("ok");
         }
 
-        if (genug) {return 0;}
-        else {return 2;}
+        if (genug = true) 
+        {System.out.println ("es hat genug");
+        return 0;}
+
+            else {
+                System.out.println ("es hat nicht genug");
+                return 2;}
+
     }
 }
 
