@@ -11,9 +11,9 @@ import java.util.List;
  /*
         Holz(0),
         Schrauben(1),
-        Farbe,
-        Kissen,
-        Karton
+        Farbe (2),
+        Kissen (3),
+        Karton (4)
     */
 
 public class Lager
@@ -24,7 +24,9 @@ public class Lager
     private int maxFarbeinheiten;
     private int maxKissen;
     private int maxKarton;
+    
     private int [] lagerbestand;
+
 
     /**
      * Konstruktor für Objekte der Klasse Lager
@@ -46,7 +48,7 @@ public class Lager
      * @param  y    ein Beispielparameter für eine Methode
      * @return        die Summe aus x und y
      */
-    public void gibLagerbestand ()
+    public void lgagerBestandAusgeben ()
     {
         System.out.println ("Lagerbestand:");
         System.out.println ("Holz:" + lagerbestand [0]);
@@ -61,8 +63,7 @@ public class Lager
         return lagerbestand [rohstoff];
     }
     
-    
-    public int gibBeschaffungszeit(Bestellung bestellung)
+    public int [] berechneBedarf (Bestellung bestellung)
     {
         int sofas = bestellung.gibAnzahlSofa();
         int stuehle = bestellung.gibAnzahlStuehle();
@@ -74,35 +75,62 @@ public class Lager
         int kartonbedarf = Stuhl.gibKarton() * stuehle + Sofa.gibKarton() * sofas;
 
         int [] bedarf_je_material = {holzbedarf, schraubenbedarf,farbbedarf,kissenbedarf,kartonbedarf};
-
-        System.out.println (lagerbestand [0]);
-        System.out.println (lagerbestand [1]);
-        System.out.println (lagerbestand [2]);
-        System.out.println (lagerbestand [3]);
-        System.out.println (lagerbestand [4]);
+        return bedarf_je_material;
+    }
+    
+    public int gibBeschaffungszeit(Bestellung bestellung)
+    {
 
         boolean genug = true;
         for(int i =0 ; i < lagerbestand.length; i++)
         {
+            int [] bedarf_je_material = berechneBedarf (bestellung);
             int bedarf = bedarf_je_material [i];
             int bestand = lagerbestand [i];
             
-            if (bestand < bedarf)
+            if (bestand <= bedarf)
             {genug = true;}
             else {genug = false;}
             
-            System.out.println ("ok");
         }
 
-        if (genug = true) 
-        {System.out.println ("es hat genug");
-        return 0;}
+        int beschaffungszeit;
 
-            else {
-                System.out.println ("es hat nicht genug");
-                return 2;}
+        if (genug = true) { 
+            beschaffungszeit = 0; }
+            else { beschaffungszeit = 2; }
+        
+            return beschaffungszeit;
 
     }
+/* 
+    public int zubestellenMaterial (Bestellung bestellung)
+    {
+        int [] bedarf_je_material = berechneBedarf (bestellung);
+
+        for (int x=0;x<lagerbestand.length;x++)
+        {
+            int [] zubestellenMaterial = {};
+
+            zubestellenMaterial [x] = bedarf_je_material [x] - lagerbestand [x];
+
+            if (zubestellenMaterial [x] > 0) 
+            { return zubestellenMaterial [x]; }
+            else { return 0; }
+        } 
+        */
+
+        System.out.println("hallo");
+        return 3;
+
+    }
+    
+    public void lagerAuffüllen ()
+    {
+       
+        
+    }
+    
 }
 
 

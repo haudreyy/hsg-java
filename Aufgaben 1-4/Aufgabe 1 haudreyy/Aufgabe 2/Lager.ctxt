@@ -1,14 +1,20 @@
 #BlueJ class context
 comment0.target=Lager
-comment0.text=\n\ \ \ \ \ \ \ \ Holz(0),\n\ \ \ \ \ \ \ \ Schrauben(1),\n\ \ \ \ \ \ \ \ Farbe,\n\ \ \ \ \ \ \ \ Kissen,\n\ \ \ \ \ \ \ \ Karton\n
+comment0.text=\n\ \ \ \ \ \ \ \ Holz(0),\n\ \ \ \ \ \ \ \ Schrauben(1),\n\ \ \ \ \ \ \ \ Farbe\ (2),\n\ \ \ \ \ \ \ \ Kissen\ (3),\n\ \ \ \ \ \ \ \ Karton\ (4)\n
 comment1.params=holzeinheiten\ schrauben\ farbeinheiten\ kissen\ karton
 comment1.target=Lager(int,\ int,\ int,\ int,\ int)
 comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Lager\n
 comment2.params=
-comment2.target=void\ gibLagerbestand()
+comment2.target=void\ lgagerBestandAusgeben()
 comment2.text=\n\ Ein\ Beispiel\ einer\ Methode\ -\ ersetzen\ Sie\ diesen\ Kommentar\ mit\ Ihrem\ eigenen\n\ \n\ @param\ \ y\ \ \ \ ein\ Beispielparameter\ f\u00FCr\ eine\ Methode\n\ @return\ \ \ \ \ \ \ \ die\ Summe\ aus\ x\ und\ y\n
 comment3.params=rohstoff
 comment3.target=int\ gibLagerbestand(int)
 comment4.params=bestellung
-comment4.target=int\ gibBeschaffungszeit(Bestellung)
-numComments=5
+comment4.target=int[]\ berechneBedarf(Bestellung)
+comment5.params=bestellung
+comment5.target=int\ gibBeschaffungszeit(Bestellung)
+comment6.params=bestellung
+comment6.target=int\ zubestellenMaterial(Bestellung)
+comment7.params=
+comment7.target=void\ lagerAuff\u00FCllen()
+numComments=8
