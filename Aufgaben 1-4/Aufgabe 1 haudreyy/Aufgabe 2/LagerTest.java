@@ -86,7 +86,23 @@ public class LagerTest
         Bestellung bestellungtest7 = new Bestellung(2, 2, 43);
         lager1.zubestellenMaterial (bestellungtest7);
     }
+
+    @Test
+    public void testLagerauffüllen()
+    {
+        Lager lager1 = new Lager(0, 0, 0, 0, 0);
+        lager1.lagerAuffüllen();
+    }
+
+    @Test
+    public void testLagerauffüllenEinzeln()
+    {
+        Lager lager1 = new Lager(200, 100, 35, 22, 1000);
+        lager1.lagerAuffüllen();
+    }
 }
+
+
 
 
 

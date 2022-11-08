@@ -15,4 +15,6 @@ comment5.params=bestellung
 comment5.target=int\ gibBeschaffungszeit(Bestellung)
 comment6.params=bestellung
 comment6.target=int[]\ zubestellenMaterial(Bestellung)
-numComments=7
+comment7.params=
+comment7.target=int[]\ lagerAuff\u00FCllen()
+numComments=8

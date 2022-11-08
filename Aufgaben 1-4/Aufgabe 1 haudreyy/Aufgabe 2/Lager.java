@@ -83,36 +83,26 @@ public class Lager
     public int gibBeschaffungszeit(Bestellung bestellung)
     {
         int [] bedarf_je_material = berechneBedarf (bestellung);
-        boolean genug = true;
-        genug = false;
-        int beschaffungszeit = 0;
-        int i = 0;
 
+        int i = 0;
         while (i < lagerbestand.length)
         {
-            if (lagerbestand [i] <= bedarf_je_material [i])
+            if (lagerbestand [i] < bedarf_je_material [i])
             {
-                genug = false; i++;
-                beschaffungszeit = 2;
+                System.out.println("returning 2");
+                return 2;
             }
-            else 
-            {
-                genug = true;i++;
-                beschaffungszeit = 0;
-            }
+            i++;
         }
-        
-        System.out.println (beschaffungszeit + "Tage");
-        return beschaffungszeit;
-
+        System.out.println("returning 0");
+        return 0;
     }
-
 
 
     public int [] zubestellenMaterial (Bestellung bestellung)
     {
         int [] bedarf_je_material = berechneBedarf (bestellung);
-        int [] zubestellenMaterial = {0,0,0,0,0};
+        int [] zubestellenMaterial = new int[5];
         int delta = 0;
 
 
@@ -121,24 +111,34 @@ public class Lager
             delta = bedarf_je_material [x] - lagerbestand [x];
            
             if (delta < 0) 
-            { delta = 0; System.out.println (delta);}
-            else { System.out.println (delta); }
+            { delta = 0;}
             
             zubestellenMaterial [x] = delta;
         }
-        
         return zubestellenMaterial;
- 
     }
   
-    /* 
-    public void lagerAuffüllen ()
+
+    public int [] lagerAuffüllen ()
     {
-       
+        int [] lagerGanzGefüllt = {maxHolzeinheiten, maxSchrauben, maxFarbeinheiten, maxKissen, maxKarton};
+        int [] zubestellenMaterialalles = new int[5];
+        int delta = 0;
+
+        for (int x=0; x < lagerbestand.length; x++)
+        {
+            delta = lagerGanzGefüllt [x] - lagerbestand [x];
+            zubestellenMaterialalles [x] = delta;
+        }
         
+        System.out.println ("" + zubestellenMaterialalles [0] + zubestellenMaterialalles [1]
+        + zubestellenMaterialalles [2] + zubestellenMaterialalles [3] + zubestellenMaterialalles [4]);
+        return zubestellenMaterialalles;
     }
-*/   
 
 }
+   
+
+
 
 
