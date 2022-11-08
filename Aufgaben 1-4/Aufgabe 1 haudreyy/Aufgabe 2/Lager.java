@@ -107,54 +107,31 @@ public class Lager
 
     }
 
-/*         
-        for(int i = 0 ; i < lagerbestand.length; i++)
-        {
-            int [] bedarf_je_material = berechneBedarf (bestellung);
-            // int bedarf = bedarf_je_material [i];
-            // int bestand = lagerbestand [i];
 
-            if (lagerbestand [i] <= bedarf_je_material [i])
-            {genug = false;}
-            else {genug = true;}
-            
 
-            System.out.println (genug);
-
-        }
-
-        int beschaffungszeit;
-
-        if (genug = true) { 
-            beschaffungszeit = 2; }
-            else { beschaffungszeit = 0; }
-        
-        System.out.println (beschaffungszeit);
-            return beschaffungszeit;
-
-    }
-
-/* 
-    public int zubestellenMaterial (Bestellung bestellung)
+    public int [] zubestellenMaterial (Bestellung bestellung)
     {
         int [] bedarf_je_material = berechneBedarf (bestellung);
+        int [] zubestellenMaterial = {0,0,0,0,0};
+        int delta = 0;
 
-        for (int x=0;x<lagerbestand.length;x++)
+
+        for (int x=0; x < lagerbestand.length; x++)
         {
-            int [] zubestellenMaterial = {};
-
-            zubestellenMaterial [x] = bedarf_je_material [x] - lagerbestand [x];
-
-            if (zubestellenMaterial [x] > 0) 
-            { return zubestellenMaterial [x]; }
-            else { return 0; }
-        } 
-
-        System.out.println("hallo");
-        return 3;
+            delta = bedarf_je_material [x] - lagerbestand [x];
+           
+            if (delta < 0) 
+            { delta = 0; System.out.println (delta);}
+            else { System.out.println (delta); }
+            
+            zubestellenMaterial [x] = delta;
+        }
+        
+        return zubestellenMaterial;
  
     }
   
+    /* 
     public void lagerAuffüllen ()
     {
        

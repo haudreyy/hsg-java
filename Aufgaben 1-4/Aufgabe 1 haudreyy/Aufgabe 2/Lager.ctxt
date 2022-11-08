@@ -13,4 +13,6 @@ comment4.params=bestellung
 comment4.target=int[]\ berechneBedarf(Bestellung)
 comment5.params=bestellung
 comment5.target=int\ gibBeschaffungszeit(Bestellung)
-numComments=6
+comment6.params=bestellung
+comment6.target=int[]\ zubestellenMaterial(Bestellung)
+numComments=7

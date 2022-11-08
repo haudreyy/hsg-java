@@ -78,7 +78,16 @@ public class LagerTest
         Bestellung bestellungtest3 = new Bestellung(2, 2, 31);
         testlager3.gibBeschaffungszeit(bestellungtest3);
     }
+
+    @Test
+    public void testZuBestellenMaterial()
+    {
+        Lager lager1 = new Lager(13, 33, 3, 1, 13);
+        Bestellung bestellungtest7 = new Bestellung(2, 2, 43);
+        lager1.zubestellenMaterial (bestellungtest7);
+    }
 }
+
 
 
 
