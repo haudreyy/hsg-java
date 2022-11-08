@@ -131,8 +131,10 @@ public class Lager
             zubestellenMaterialalles [x] = delta;
         }
         
-        System.out.println ("" + zubestellenMaterialalles [0] + zubestellenMaterialalles [1]
-        + zubestellenMaterialalles [2] + zubestellenMaterialalles [3] + zubestellenMaterialalles [4]);
+        System.out.println ("Bestellung an Liefernat:");
+        System.out.println ("Wir brauchen:");
+        System.out.println (+ zubestellenMaterialalles [0] + " Holz, " + zubestellenMaterialalles [1] + " Schrauben, "
+        + zubestellenMaterialalles [2] + " Farbe, " + zubestellenMaterialalles [3] + " Kissen, " + zubestellenMaterialalles [4] + " Karton, ");
         return zubestellenMaterialalles;
     }
 
