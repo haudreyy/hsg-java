@@ -56,13 +56,31 @@ public class LagerTest
     }
 
     @Test
-    public void testBeschaffungszeit()
+    public void testBeschaffungszeitNachbestellen()
     {
         Lager lagertest6 = new Lager(2, 2, 2, 2, 2);
         Bestellung bestellung6 = new Bestellung(2, 2, 99);
         lagertest6.gibBeschaffungszeit(bestellung6);
     }
+
+    @Test
+    public void testBeschaffungszeitNichtNachbestellen()
+    {
+        Lager lagertest9 = new Lager(100, 100, 100, 100, 100);
+        Bestellung bestellung9 = new Bestellung(2, 2, 53);
+        lagertest9.gibBeschaffungszeit(bestellung9);
+    }
+
+    @Test
+    public void testNachbestellenAberNurEinzeln()
+    {
+        Lager testlager3 = new Lager(13, 31, 5, 11, 12);
+        Bestellung bestellungtest3 = new Bestellung(2, 2, 31);
+        testlager3.gibBeschaffungszeit(bestellungtest3);
+    }
 }
+
+
 
 
 

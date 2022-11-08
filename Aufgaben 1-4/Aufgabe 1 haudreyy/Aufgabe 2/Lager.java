@@ -82,30 +82,54 @@ public class Lager
 
     public int gibBeschaffungszeit(Bestellung bestellung)
     {
-
+        int [] bedarf_je_material = berechneBedarf (bestellung);
         boolean genug = true;
         genug = false;
+        int beschaffungszeit = 0;
+        int i = 0;
 
+        while (genug = false || i < lagerbestand.length)
+        {
+            if (lagerbestand [i] <= bedarf_je_material [i])
+            {
+                genug = false; i++;
+                beschaffungszeit = 2;
+            }
+            else 
+            {
+                genug = true;i++;
+                beschaffungszeit = 0;
+            }
+        }
+        
+        System.out.println (beschaffungszeit + "Tage");
+        return beschaffungszeit;
+
+    }
+
+/*         
         for(int i = 0 ; i < lagerbestand.length; i++)
         {
             int [] bedarf_je_material = berechneBedarf (bestellung);
-            int bedarf = bedarf_je_material [i];
-            int bestand = lagerbestand [i];
+            // int bedarf = bedarf_je_material [i];
+            // int bestand = lagerbestand [i];
+
+            if (lagerbestand [i] <= bedarf_je_material [i])
+            {genug = false;}
+            else {genug = true;}
             
+
             System.out.println (genug);
-            
-            if (bestand <= bedarf)
-            {genug = true;}
-            else {genug = false;}
-            
+
         }
 
         int beschaffungszeit;
 
         if (genug = true) { 
-            beschaffungszeit = 0; }
-            else { beschaffungszeit = 2; }
+            beschaffungszeit = 2; }
+            else { beschaffungszeit = 0; }
         
+        System.out.println (beschaffungszeit);
             return beschaffungszeit;
 
     }
