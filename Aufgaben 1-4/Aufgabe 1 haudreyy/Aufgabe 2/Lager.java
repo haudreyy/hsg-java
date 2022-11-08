@@ -119,24 +119,33 @@ public class Lager
     }
   
 
-    public int [] lagerAuffüllen ()
+    public void lagerAuffüllen ()
     {
         int [] lagerGanzGefüllt = {maxHolzeinheiten, maxSchrauben, maxFarbeinheiten, maxKissen, maxKarton};
         int [] zubestellenMaterialalles = new int[5];
-        int delta = 0;
 
         for (int x=0; x < lagerbestand.length; x++)
         {
-            delta = lagerGanzGefüllt [x] - lagerbestand [x];
-            zubestellenMaterialalles [x] = delta;
+            zubestellenMaterialalles [x] = lagerGanzGefüllt [x] - lagerbestand [x];
         }
         
-        System.out.println ("Bestellung an Liefernat:");
-        System.out.println ("Wir brauchen:");
-        System.out.println (+ zubestellenMaterialalles [0] + " Holz, " + zubestellenMaterialalles [1] + " Schrauben, "
-        + zubestellenMaterialalles [2] + " Farbe, " + zubestellenMaterialalles [3] + " Kissen, " + zubestellenMaterialalles [4] + " Karton, ");
-        return zubestellenMaterialalles;
+        Lieferant lieferant = new Lieferant();
+
+        int[] lieferung = lieferant.bestellungAufgeben(zubestellenMaterialalles);
+
+        lagerbefuellen(lieferung);
     }
+
+    
+    public void lagerbefuellen(int[] lieferung)
+    {
+        for (int i = 0; i < lagerbestand.length; i++)
+        {
+            lagerbestand[i] += lieferung[i];
+        }
+    }
+
+
 
 }
    
