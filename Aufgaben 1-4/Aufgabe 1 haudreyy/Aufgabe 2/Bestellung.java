@@ -43,8 +43,6 @@ public class Bestellung
             produkte.add(new Sofa());
             index ++;
         }
-        System.out.println(produkte.size());
-            
         
     }
 

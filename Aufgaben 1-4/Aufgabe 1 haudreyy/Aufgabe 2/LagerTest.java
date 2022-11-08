@@ -41,27 +41,26 @@ public class LagerTest
     }
 
     @Test
-    public void Test1()
+    public void lagerTest()
     {
-        Lager lager1 = new Lager(2, 2, 2, 2, 2);
-        Bestellung bestellung8 = new Bestellung(2, 2, 88);
-        Bestellung bestellung9 = new Bestellung(1, 0, 100);
+        Lager lagertest = new Lager(2, 2, 2, 2, 2);
+        Bestellung bestellungtest1 = new Bestellung(2, 2, 45);
     }
 
     @Test
-    public void test2()
+    public void lagertest_methode()
     {
-        Lager lager1 = new Lager(2, 2, 2, 2, 2);
-        Bestellung bestellung10 = new Bestellung(1, 0, 76);
-        lager1.zubestellenMaterial(bestellung10);
+        Lager lagertest6 = new Lager(2, 2, 2, 2, 2);
+        Bestellung bestellungtest6 = new Bestellung(2, 2, 6);
+        lagertest6.berechneBedarf(bestellungtest6);
     }
 
     @Test
-    public void test_beschaffungszeit()
+    public void testBeschaffungszeit()
     {
-        Lager lager5 = new Lager(2, 2, 2, 2, 2);
-        Bestellung bestellu1 = new Bestellung(2, 2, 67);
-        lager5.gibBeschaffungszeit(bestellu1);
+        Lager lagertest6 = new Lager(2, 2, 2, 2, 2);
+        Bestellung bestellung6 = new Bestellung(2, 2, 99);
+        lagertest6.gibBeschaffungszeit(bestellung6);
     }
 }
 

@@ -48,7 +48,7 @@ public class Lager
      * @param  y    ein Beispielparameter für eine Methode
      * @return        die Summe aus x und y
      */
-    public void lgagerBestandAusgeben ()
+    public void lagerBestandAusgeben ()
     {
         System.out.println ("Lagerbestand:");
         System.out.println ("Holz:" + lagerbestand [0]);
@@ -74,19 +74,25 @@ public class Lager
         int kissenbedarf = Sofa.gibKissen() * sofas;
         int kartonbedarf = Stuhl.gibKarton() * stuehle + Sofa.gibKarton() * sofas;
 
-        int [] bedarf_je_material = {holzbedarf, schraubenbedarf,farbbedarf,kissenbedarf,kartonbedarf};
+        int [] bedarf_je_material = {holzbedarf, schraubenbedarf , farbbedarf ,kissenbedarf ,kartonbedarf};
+                
         return bedarf_je_material;
-    }
-    
+    } 
+ 
+
     public int gibBeschaffungszeit(Bestellung bestellung)
     {
 
         boolean genug = true;
-        for(int i =0 ; i < lagerbestand.length; i++)
+        genug = false;
+
+        for(int i = 0 ; i < lagerbestand.length; i++)
         {
             int [] bedarf_je_material = berechneBedarf (bestellung);
             int bedarf = bedarf_je_material [i];
             int bestand = lagerbestand [i];
+            
+            System.out.println (genug);
             
             if (bestand <= bedarf)
             {genug = true;}
@@ -103,6 +109,7 @@ public class Lager
             return beschaffungszeit;
 
     }
+
 /* 
     public int zubestellenMaterial (Bestellung bestellung)
     {
@@ -118,19 +125,19 @@ public class Lager
             { return zubestellenMaterial [x]; }
             else { return 0; }
         } 
-        */
 
         System.out.println("hallo");
         return 3;
-
+ 
     }
-    
+  
     public void lagerAuffüllen ()
     {
        
         
     }
-    
+*/   
+
 }
 
 
