@@ -88,7 +88,7 @@ public class Lager
         int beschaffungszeit = 0;
         int i = 0;
 
-        while (genug = false || i < lagerbestand.length)
+        while (i < lagerbestand.length)
         {
             if (lagerbestand [i] <= bedarf_je_material [i])
             {
