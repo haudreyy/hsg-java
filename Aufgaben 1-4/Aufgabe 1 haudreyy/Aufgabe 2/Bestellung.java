@@ -3,14 +3,14 @@ import java.util.List;
 import java.util.Iterator;
 
 /**
- * Beschreiben Sie hier die Klasse Bestellung.
+ * * Die Klasse Bestellung ermöglicht Informationen über diese zu erfassen und mit der Bestellung umzugehen.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author Gruppe 7
+ * @version 2.0
  */
 public class Bestellung
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+    // Die Instanzvariablen für die Klasse Bestellung werden hier kreiert. 
     private ArrayList <Produkt> produkte;
     private String bestellbestaetigung;
     private int herstellungszeit;
@@ -18,9 +18,8 @@ public class Bestellung
     private int anzahlStuehle;
     private int anzahlSofa;
 
-    /**
-     * Konstruktor für Objekte der Klasse Bestellung
-     */
+    // Dieser Konstruktor ermöglicht die einfache Erstellung einer neuen Bestellung
+    // Parameter dafür sind: Anzahl Stühle, Anzahl Sofas und die Bestellnummer
     public Bestellung(int stuehle, int sofas, int nummer)
     {
         anzahlStuehle = stuehle;
@@ -30,6 +29,7 @@ public class Bestellung
         bestellbestaetigung = "Bestellung wurde erfolgreich aufgenommen!";
         produkte = new ArrayList<Produkt>();
 
+        // Für jeden Stuhl wird ein Objekt erstellt
         int index = 0;
         while (index < stuehle) 
         {
@@ -37,35 +37,40 @@ public class Bestellung
             index ++;
         }
 
+        // Für jedes Sofa wird ein Objekt erstellt
         index = 0;
         while (index < sofas) 
         {
             produkte.add(new Sofa());
             index ++;
         }
-        
     }
 
-
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
+    // Gibt eine Bestellbestätigung aus
     public String gibBestellbestaetigung()
     {
         return bestellbestaetigung;
     }
-    
-    public int gibBestellnummer()
-    {
-        return bestellnummer;
-    }
-    
+
+    // Gibt die Herstellungszeit
     public int gibHerstellungszeit()
     {
         return herstellungszeit;
+    }
+
+    public int gibLieferzeit ()
+    {
+        herstellungszeit = gibHerstellungszeit ();
+        // beschaffungszeit = 
+        // gibBeschaffungszeit(Bestellung bestellung);
+
+        return herstellungszeit;
+    }
+    
+    // Verschiedene get-Methoden
+    public int gibBestellnummer()
+    {
+        return bestellnummer;
     }
     
     public int gibAnzahlStuehle()

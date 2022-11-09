@@ -2,23 +2,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Beschreiben Sie hier die Klasse Lager.
+ * Die Klasse Lager verwaltet die Materialien, welche benötigt werden um Bestellungen zu beabrbeiten.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author (Gruppe 7) 
+ * @version (version 2.0)
  */
 
- /*
-        Holz(0),
-        Schrauben(1),
-        Farbe (2),
-        Kissen (3),
-        Karton (4)
+ /* Die Materialien in den Arrays entsprechen der folgenden Reihenfolge:
+        [0] Holz,
+        [1] Schrauben,
+        [2] Farbe,
+        [3] Kissen,
+        [4] Karton
     */
 
 public class Lager
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+    // Instanzvariablen - hier befinden sich die Instanzvariabeln, welche in der Klasse Lager genutzt werden
     private int maxHolzeinheiten;
     private int maxSchrauben;
     private int maxFarbeinheiten;
@@ -29,25 +29,22 @@ public class Lager
 
 
     /**
-     * Konstruktor für Objekte der Klasse Lager
+     * Dieser Konstruktor ermöglicht die einfache Erstellung eines Lagers. 
+     * Die Anzahl Materialien dieses Lagers müssen eingegeben werden.
      */
     public Lager(int holzeinheiten, int schrauben, int farbeinheiten, int kissen, int karton)
     {
-        // Instanzvariable initialisieren
+        // Instanzvariable pro material wird initialisiert
         maxHolzeinheiten = 1000;
         maxSchrauben = 5000;
         maxFarbeinheiten = 1000;
         maxKissen = 100;
         maxKarton = 1000;
+        // Erstellt einen Array für das Lager mit den entsprechenden Materialmengen
         lagerbestand = new int[]{holzeinheiten, schrauben, farbeinheiten, kissen, karton} ;
     }
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
+    // Diese Methode gibt den aktuellen Lagerbestand aus in die Konsole aus
     public void lagerBestandAusgeben ()
     {
         System.out.println ("Lagerbestand:");
@@ -58,47 +55,51 @@ public class Lager
         System.out.println ("Karton:" + lagerbestand [4]);
     }
 
-    public int gibLagerbestand (int rohstoff)
+    // Diese Methode gibt den Lagerstand je nach Material an
+    public int gibLagerbestand (int material)
     {
-        return lagerbestand [rohstoff];
+        return lagerbestand [material];
     }
     
+    // Berechnet den Bedarf an Material für eine bestimmte Bestellung
     public int [] berechneBedarf (Bestellung bestellung)
     {
+        // Wieviele Stühle und Sofas wurden bestellt?
         int sofas = bestellung.gibAnzahlSofa();
         int stuehle = bestellung.gibAnzahlStuehle();
         
+        // Wieviel Material braucht man dafür?
         int holzbedarf = Stuhl.gibHolz() * stuehle + Sofa.gibHolz() * sofas;
         int schraubenbedarf = Stuhl.gibSchrauben() * stuehle + Sofa.gibSchrauben() * sofas;
         int farbbedarf = Stuhl.gibFarbe() * stuehle + Sofa.gibFarbe() * sofas;
         int kissenbedarf = Sofa.gibKissen() * sofas;
         int kartonbedarf = Stuhl.gibKarton() * stuehle + Sofa.gibKarton() * sofas;
-
+        
+        // Bedarf in einem Array zusammengefasst
         int [] bedarf_je_material = {holzbedarf, schraubenbedarf , farbbedarf ,kissenbedarf ,kartonbedarf};
-                
         return bedarf_je_material;
     } 
  
-
+    // Gibt die Beschaffungszeit für eine bestimmte Bestellung
     public int gibBeschaffungszeit(Bestellung bestellung)
     {
         int [] bedarf_je_material = berechneBedarf (bestellung);
 
+        // Wenn alles Material für eine Bestellung vorhanden ist, dann retourniert die Methode 0 Tage, sonst 2 Tage
+        // Die Einheit ist Tage
         int i = 0;
         while (i < lagerbestand.length)
         {
             if (lagerbestand [i] < bedarf_je_material [i])
             {
-                System.out.println("returning 2");
                 return 2;
             }
             i++;
         }
-        System.out.println("returning 0");
         return 0;
     }
 
-
+    // Hier wird das zu bestellende Material für eine bestimmte Bestellung berechnet
     public int [] zubestellenMaterial (Bestellung bestellung)
     {
         int [] bedarf_je_material = berechneBedarf (bestellung);
@@ -118,25 +119,26 @@ public class Lager
         return zubestellenMaterial;
     }
   
-
+    // Diese Methode füllt das Lager komplett auf.
     public void lagerAuffüllen ()
     {
         int [] lagerGanzGefüllt = {maxHolzeinheiten, maxSchrauben, maxFarbeinheiten, maxKissen, maxKarton};
-        int [] zubestellenMaterialalles = new int[5];
+        int [] zubestellenMaterial = new int[5];
 
+        // Berechnet wieviel bestellt werden muss um die maximale Kapazität zu erreichen
         for (int x=0; x < lagerbestand.length; x++)
         {
-            zubestellenMaterialalles [x] = lagerGanzGefüllt [x] - lagerbestand [x];
+            zubestellenMaterial [x] = lagerGanzGefüllt [x] - lagerbestand [x];
         }
-        
+        // Es wird ein Objekt der Klasse Lieferant erstellt
         Lieferant lieferant = new Lieferant();
-
-        int[] lieferung = lieferant.bestellungAufgeben(zubestellenMaterialalles);
-
+        // Dieses erhält das zu bestellende Material
+        int[] lieferung = lieferant.bestellungAufgeben(zubestellenMaterial);
+        // Das Lager wird gefüllt
         lagerbefuellen(lieferung);
     }
 
-    
+    // Das Lager wird befüllt
     public void lagerbefuellen(int[] lieferung)
     {
         for (int i = 0; i < lagerbestand.length; i++)

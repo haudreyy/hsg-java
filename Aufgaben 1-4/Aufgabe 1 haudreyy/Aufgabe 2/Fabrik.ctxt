@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Fabrik
-comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Fabrik.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment0.text=\n\ Die\ Klasse\ Fabrik\ erm\u00F6glicht\ Bestellungen\ aufzugeben\ und\ auszugeben.\n\ \n\ @author\ Gruppe\ 7\n\ @version\ 2.0\n
 comment1.params=
 comment1.target=Fabrik()
 comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Fabrik\n

@@ -1,10 +1,9 @@
 import java.util.ArrayList;
-
 /**
- * Beschreiben Sie hier die Klasse Fabrik.
+ * Die Klasse Fabrik ermöglicht Bestellungen aufzugeben und auszugeben.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author Gruppe 7
+ * @version 2.0
  */
 public class Fabrik
 {
@@ -17,39 +16,36 @@ public class Fabrik
      */
     public Fabrik()
     {
-        // Instanzvariable initialisieren
+        // Instanzvariable werden initialisiert
         bestellzaehler = 0;
         bestellungen = new ArrayList<Bestellung>();
         System.out.println("Fabrik erstellt");
     }
 
+    // Hier die Main-Methode
     public static void main(String[] args)
     {
         Fabrik fabrik = new Fabrik ();
+        // Man könnte Code für den Start einfügen
     }
     
+    // Mit dieser Methode kann man eine neue Bestellung aufgeben
     public void bestellungAufgeben (int stuehle, int sofas)
     {
         Bestellung b = new Bestellung(stuehle, sofas, bestellzaehler++);
         bestellungen.add (b);
     }
 
+    // Diese Methode gibt die vorhandenen Bestellungen aus
     public void bestellungenAusgeben ()
     {
         for (Bestellung b : bestellungen)
         {
             String msg = "Bestellung " + b.gibBestellnummer() + ": " 
             + b.gibAnzahlStuehle() + " Stühle und " + b.gibAnzahlSofa() 
-            + " Sofas. Dauert insgesamt " + b.gibBeschaffungszeit() + " minuten.";
-        System.out.println(msg);
+            + " Sofas. Dauert insgesamt " + b.gibLieferzeit() + " minuten.";
+            
+            System.out.println(msg);
         }
     }
-
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    
 }
