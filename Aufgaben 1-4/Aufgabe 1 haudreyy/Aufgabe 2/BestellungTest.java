@@ -40,18 +40,13 @@ public class BestellungTest
     {
     }
 
-    @Test
-    public void test1()
-    {
-        Bestellung bestellu1 = new Bestellung(2, 2, 999);
-        Bestellung bestellu2 = new Bestellung(32, 1, 998);
-    }
 
     @Test
-    public void testLieferzeit()
+    public void testBeschaffungszeit()
     {
-        Bestellung bestellung1 = new Bestellung(2, 1, 22);
-        bestellung1.gibLieferzeit();
+        Bestellung bestellu1 = new Bestellung(2, 1, 23);
+        Lager lager1 = new Lager(4, 4, 4, 4, 4);
+        bestellu1.gibLieferzeit(lager1);
     }
 }
 

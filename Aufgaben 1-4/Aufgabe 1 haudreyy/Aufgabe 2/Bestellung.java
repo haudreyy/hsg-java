@@ -44,6 +44,15 @@ public class Bestellung
             produkte.add(new Sofa());
             index ++;
         }
+
+    }
+
+    // Erstelle ein Lager, woraus das Material genommen wird
+    public Lager erstelleLager ()
+    {
+        Lager lager;
+        lager = new Lager (0,0,0,0,0);
+        return lager;
     }
 
     // Gibt eine Bestellbestätigung aus
@@ -58,13 +67,35 @@ public class Bestellung
         return herstellungszeit;
     }
 
-    public int gibLieferzeit ()
+    // Die Lieferzeit wird für das Objekt Bestellung angegeben
+    // Hierfür wird auf ein Objekt Lager Bezug genommen
+    public int gibLieferzeit (Lager lager)
     {
         herstellungszeit = gibHerstellungszeit ();
-        // beschaffungszeit = 
-        // gibBeschaffungszeit(Bestellung bestellung);
+        int beschaffungszeit;
+        beschaffungszeit = lager.gibBeschaffungszeit(this);
 
-        return herstellungszeit;
+        // Die Beschaffungszeit ist in Tage und die Herstellungszeit in Stunden
+        System.out.println (" Die Lieferung ist in " + beschaffungszeit + " Tage und " + herstellungszeit + " Stunden lieferbar.");
+
+        // Diese Methode gibt die Lieferzeit in Stunden aus
+        beschaffungszeit = beschaffungszeit * 24;
+        return herstellungszeit + beschaffungszeit;
+    } 
+
+    // Das zu bestellende Material wird für das Objekt Bestellung angegeben
+    // Hierfür wird auf ein Objekt Lager Bezug genommen
+    public void materialZuBestellen (Lager lager)
+    {
+        int [] materialZuBestellen ; 
+        materialZuBestellen = lager.zubestellenMaterial (this);
+
+        System.out.println ( "Für diese Bestellung wurde folgendes Material bestellt:");
+        System.out.println (materialZuBestellen [0]+ " an Holz ");
+        System.out.println (materialZuBestellen [1]+ " an Schrauben ");
+        System.out.println (materialZuBestellen [2]+ " an Farbe ");
+        System.out.println (materialZuBestellen [3]+ " an Kissen ");
+        System.out.println (materialZuBestellen [4]+ " an Karton ");
     }
     
     // Verschiedene get-Methoden
