@@ -10,15 +10,18 @@ public class Fabrik
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private ArrayList <Bestellung> bestellungen;
     private int bestellzaehler;
+    private Lager lager;
     
     /**
      * Konstruktor für Objekte der Klasse Fabrik
+     * Es wird eine Fabrik mit Lager erstellt
      */
     public Fabrik()
     {
         // Instanzvariable werden initialisiert
         bestellzaehler = 0;
         bestellungen = new ArrayList<Bestellung>();
+        lager = new Lager(0,0,0,0,0);
         System.out.println("Fabrik erstellt");
     }
 
@@ -32,20 +35,31 @@ public class Fabrik
     // Mit dieser Methode kann man eine neue Bestellung aufgeben
     public void bestellungAufgeben (int stuehle, int sofas)
     {
-        Bestellung b = new Bestellung(stuehle, sofas, bestellzaehler++);
-        bestellungen.add (b);
+        if (stuehle < 0 || sofas < 0) 
+        {System.out.println ("Error: Keine negativen Werte erlaubt");}
+        
+        else {
+        Bestellung bestellung = new Bestellung(stuehle, sofas, bestellzaehler++);
+        bestellung.gibBearbeitungszeit (lager);
+        bestellungen.add (bestellung);}
     }
 
     // Diese Methode gibt die vorhandenen Bestellungen aus
     public void bestellungenAusgeben ()
     {
-        for (Bestellung b : bestellungen)
+        for (Bestellung bestellung : bestellungen)
         {
-            String msg = "Bestellung " + b.gibBestellnummer() + ": " 
-            + b.gibAnzahlStuehle() + " Stühle und " + b.gibAnzahlSofa() 
+            String msg = "Bestellung " + bestellung.gibBestellnummer() + ": " 
+            + bestellung.gibAnzahlStuehle() + " Stühle und " + bestellung.gibAnzahlSofa() 
             + " Sofas. Dauert insgesamt "; //+ */ b.gibLieferzeit() */  + " minuten.";
             
             System.out.println(msg);
         }
+    }
+
+    // Hiermit kann die Fabrik sein Lager füllen
+    public void lagerAuffüllen ()
+    {
+        lager.lagerAuffüllen ();
     }
 }

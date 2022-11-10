@@ -41,13 +41,6 @@ public class BestellungTest
     }
 
 
-    @Test
-    public void testBeschaffungszeit()
-    {
-        Bestellung bestellu1 = new Bestellung(2, 1, 23);
-        Lager lager1 = new Lager(4, 4, 4, 4, 4);
-        bestellu1.gibLieferzeit(lager1);
-    }
 }
 
 
