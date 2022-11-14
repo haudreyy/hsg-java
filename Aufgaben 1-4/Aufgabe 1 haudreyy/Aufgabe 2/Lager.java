@@ -13,7 +13,7 @@ import java.util.List;
         [1] Schrauben,
         [2] Farbe,
         [3] Kissen,
-        [4] Karton
+        [4] Karton 
     */
 
 public class Lager
@@ -44,7 +44,7 @@ public class Lager
         lagerbestand = new int[]{holzeinheiten, schrauben, farbeinheiten, kissen, karton} ;
     }
 
-    // Diese Methode gibt den aktuellen Lagerbestand aus in die Konsole aus
+    // Diese Methode gibt den aktuellen Lagerbestand in die Konsole aus
     public void lagerBestandAusgeben ()
     {
         System.out.println ("Lagerbestand:");
@@ -86,7 +86,6 @@ public class Lager
         int [] bedarf_je_material = berechneBedarf (bestellung);
 
         // Wenn alles Material für eine Bestellung vorhanden ist, dann retourniert die Methode 0 Tage, sonst 2 Tage
-        // Die Einheit ist Tage
         int i = 0;
         while (i < lagerbestand.length)
         {
@@ -106,11 +105,12 @@ public class Lager
         int [] zubestellenMaterial = new int[5];
         int delta = 0;
 
-
+        // Einzeln durch alle materialien gehen und schauen ob es genug hat
         for (int x=0; x < lagerbestand.length; x++)
         {
             delta = bedarf_je_material [x] - lagerbestand [x];
            
+            // wenn wir mehr lagerbestand als bedarf haben, müssen wir 0 bestellen (keine negativen Anzahlen)
             if (delta < 0) 
             { delta = 0;}
             
@@ -120,7 +120,7 @@ public class Lager
     }
   
     // Diese Methode füllt das Lager komplett auf.
-    public void lagerAuffüllen ()
+    public void lagerAuffüllen (Lieferant lieferant)
     {
         int [] lagerGanzGefüllt = {maxHolzeinheiten, maxSchrauben, maxFarbeinheiten, maxKissen, maxKarton};
         int [] zubestellenMaterial = new int[5];
@@ -130,8 +130,6 @@ public class Lager
         {
             zubestellenMaterial [x] = lagerGanzGefüllt [x] - lagerbestand [x];
         }
-        // Es wird ein Objekt der Klasse Lieferant erstellt
-        Lieferant lieferant = new Lieferant();
         // Dieses erhält das zu bestellende Material
         int[] lieferung = lieferant.bestellungAufgeben(zubestellenMaterial);
         // Das Lager wird gefüllt

@@ -41,6 +41,24 @@ public class BestellungTest
     }
 
 
+
+    @Test
+    public void testLieferzeit()
+    {
+        Lager lager1 = new Lager(100, 100, 100, 100, 100);
+        Bestellung bestellung32 = new Bestellung(2, 2, 32, lager1);
+        bestellung32.gibLieferzeit();
+    }
+
+    @Test
+    public void testBestellungen()
+    {
+        Lager lager1 = new Lager(10, 10, 10, 10, 10);
+        Bestellung bestellu1 = new Bestellung(3, 8, 22, lager1);
+        Bestellung bestellu2 = new Bestellung(15, 15, 3, lager1);
+    }
 }
+
+
 
 

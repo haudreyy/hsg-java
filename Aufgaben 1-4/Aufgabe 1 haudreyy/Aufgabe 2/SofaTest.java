@@ -40,11 +40,12 @@ public class SofaTest
     {
     }
 
+
     @Test
     public void test1()
     {
         Sofa sofa1 = new Sofa();
-        Produkt produkt1 = new Produkt();
     }
 }
+
 

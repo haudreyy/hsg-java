@@ -16,7 +16,7 @@
 public class Lieferant
 {
     // Es gibt keine besonderen Instanzvariabeln
-    // Der Konstruktor ist hier nicht besonders
+    // Der Konstruktor wird hier (noch) nicht wirklich gebraucht
     public Lieferant()
     {
     }

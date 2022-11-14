@@ -19,100 +19,117 @@ public class Bestellung
     private ArrayList <Produkt> produkte;
     private String bestellbestaetigung;
     private int herstellungszeit;
+    private int standardLieferzeit = 1;
+    private int lieferzeit;
     private int bestellnummer;
     private int anzahlStuehle;
     private int anzahlSofa;
+    private int[] materialbedarf;
+    private Lager lager;
 
     // Dieser Konstruktor ermöglicht die einfache Erstellung einer neuen Bestellung
     // Parameter dafür sind: Anzahl Stühle, Anzahl Sofas und die Bestellnummer
-    public Bestellung(int stuehle, int sofas, int nummer)
+    public Bestellung(int stuehle, int sofas, int nummer, Lager lager_in)
     {
         // Keine negativen Werte eingeben
         if (stuehle < 0 || sofas < 0 || nummer < 0) 
-        {System.out.println ("Error: Keine negativen Werte erlaubt");}
-        
-        else {
-        anzahlStuehle = stuehle;
-        anzahlSofa = sofas;
-        herstellungszeit = sofas * Sofa.gibZeit() + stuehle * Stuhl.gibZeit();
-        bestellnummer = nummer;
-        bestellbestaetigung = "Bestellung wurde erfolgreich aufgenommen!";
-        produkte = new ArrayList<Produkt>(); 
-
-        // Für jeden Stuhl wird ein Objekt erstellt
-        int index = 0;
-        while (index < stuehle) 
         {
-            produkte.add(new Stuhl());
-            index ++;
+            System.out.println ("Error: Keine negativen Werte erlaubt");
+            bestellbestaetigung = "Bestellung war nicht erfolgreich.";
         }
-
-        // Für jedes Sofa wird ein Objekt erstellt
-        index = 0;
-        while (index < sofas) 
+        else 
         {
-            produkte.add(new Sofa());
-            index ++;
-        }}
-    }
+            bestellnummer = nummer;
+            anzahlStuehle = stuehle;
+            anzahlSofa = sofas;
+            lager = lager_in;
 
-    // Erstelle ein Lager, woraus das Material genommen werden kann
-    public Lager erstelleLager (int holzeinheiten, int schrauben, int farbeinheiten, int kissen, int karton)
-    {
-        Lager lager;
-        lager = new Lager (holzeinheiten, schrauben, farbeinheiten, kissen, karton);
-        return lager;
-    }
+            produkte = new ArrayList<Produkt>();
+            // Für jeden Stuhl wird ein Objekt erstellt
+            int index = 0;
+            while (index < stuehle) 
+            {
+                produkte.add(new Stuhl());
+                index ++;
+            }
+
+            // Für jedes Sofa wird ein Objekt erstellt
+            index = 0;
+            while (index < sofas) 
+            {
+                produkte.add(new Sofa());
+                index ++;
+            }
+
+            // Berechne den Materialbedarf
+            materialbedarf = berechneMaterialBedarf();
+
+            // Berechne herstellungszeit (arbeitszeit in Minuten)
+            herstellungszeit = sofas * Sofa.gibZeit() + stuehle * Stuhl.gibZeit();
+            
+            // Berechne Lieferzeit (Tage)
+            lieferzeit = berechneLieferzeit();
+
+            // Gib die Bestellbestätigung
+            bestellbestaetigung = gibBestellBestaetigung();
+
+        }
+        // Gibt Bestellbestätigung
+        System.out.println (bestellbestaetigung);
+}
 
     // Gibt eine Bestellbestätigung aus
-    public String gibAuftragsbestaetigung(Lager lager)
+    public String gibBestellBestaetigung()
     {
         // Die Auftragsbestätigung prüft wie lange die Bestellung bearbeitet werden muss (inkl. Zeit für Materiallieferungen aus Lager)
-        int bearbeitungszeit;
-        bearbeitungszeit = gibBearbeitungszeit (lager);
-        System.out.println (bestellbestaetigung);
+        bestellbestaetigung = "Vielen Dank für Ihre Bestellung. Die Lieferzeit beträgt " + lieferzeit + "Tage.";
 
         return bestellbestaetigung;
     }
 
-    // Gibt die Herstellungszeit
+    // Berechnet den Bedarf an Material für eine bestimmte Bestellung
+    private int [] berechneMaterialBedarf ()
+    {
+        // Wieviel Material braucht man dafür?
+        int holzbedarf = Stuhl.gibHolz() * anzahlStuehle + Sofa.gibHolz() * anzahlSofa;
+        int schraubenbedarf = Stuhl.gibSchrauben() * anzahlStuehle + Sofa.gibSchrauben() * anzahlSofa;
+        int farbbedarf = Stuhl.gibFarbe() * anzahlStuehle + Sofa.gibFarbe() * anzahlSofa;
+        int kissenbedarf = Sofa.gibKissen() * anzahlSofa;
+        int kartonbedarf = Stuhl.gibKarton() * anzahlStuehle + Sofa.gibKarton() * anzahlSofa;
+        
+        // Bedarf in einem Array zusammengefasst
+        int [] bedarf_je_material = {holzbedarf, schraubenbedarf , farbbedarf ,kissenbedarf ,kartonbedarf};
+        return bedarf_je_material;
+    } 
+
+    // Die Bearbeitungszeit wird für das Objekt Bestellung angegeben
+    // Hierfür wird auf ein Objekt Lager Bezug genommen
+    public int berechneLieferzeit ()
+    {
+        // An einem Tag werden 400 Minuten an den Aufträgen gearbeitet.
+        double arbeitszeit = (double) herstellungszeit / 400;
+
+        // Die Arbeitszeit wird hoch gerundet auf ganze Tage
+        System.out.println (arbeitszeit);
+        int arbeitstage = (int) arbeitszeit;
+
+        int zeit = standardLieferzeit + arbeitstage + lager.gibBeschaffungszeit(this);
+
+        // Diese Methode gibt die Lieferzeit in Tagen aus
+        return zeit;
+    }
+
+    // Verschiedene get-Methoden
+    public int gibLieferzeit ()
+    {
+        return lieferzeit;
+    }
+
     public int gibHerstellungszeit()
     {
         return herstellungszeit;
     }
 
-    // Die Bearbeitungszeit wird für das Objekt Bestellung angegeben
-    // Hierfür wird auf ein Objekt Lager Bezug genommen
-    public int gibBearbeitungszeit (Lager lager)
-    {
-        herstellungszeit = gibHerstellungszeit ();
-        int beschaffungszeit;
-        beschaffungszeit = lager.gibBeschaffungszeit(this);
-
-        // Die Beschaffungszeit ist in Tage und die Herstellungszeit in Stunden
-        System.out.println (" Die Lieferung ist in " + beschaffungszeit + " Tage und " + herstellungszeit + " Stunden lieferbar.");
-
-        // Diese Methode gibt die Lieferzeit in Stunden aus
-        beschaffungszeit = beschaffungszeit * 24;
-        return herstellungszeit + beschaffungszeit;
-    } 
-
-    // Das zu bestellende Material wird für das Objekt Bestellung angegeben
-    // Hierfür wird auf ein Objekt Lager Bezug genommen
-    public void materialZuBestellen (Lager lager)
-    {
-        int [] materialZuBestellen ; 
-        materialZuBestellen = lager.zubestellenMaterial (this);
-
-        System.out.println ( "Für diese Bestellung wurde folgendes Material bestellt:");
-        System.out.println (materialZuBestellen [0]+ " an Holz ");
-        System.out.println (materialZuBestellen [1]+ " an Schrauben ");
-        System.out.println (materialZuBestellen [2]+ " an Farbe ");
-        System.out.println (materialZuBestellen [3]+ " an Kissen ");
-        System.out.println (materialZuBestellen [4]+ " an Karton ");
-    }
-    
-    // Verschiedene get-Methoden
     public int gibBestellnummer()
     {
         return bestellnummer;

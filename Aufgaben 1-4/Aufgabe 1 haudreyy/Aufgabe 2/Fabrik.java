@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 /**
  * Die Klasse Fabrik ermöglicht Bestellungen aufzugeben und auszugeben.
- * 
+ *  
  * @author Gruppe 7
  * @version 2.0
  */
@@ -11,6 +11,7 @@ public class Fabrik
     private ArrayList <Bestellung> bestellungen;
     private int bestellzaehler;
     private Lager lager;
+    private Lieferant lieferant;
     
     /**
      * Konstruktor für Objekte der Klasse Fabrik
@@ -18,14 +19,15 @@ public class Fabrik
      */
     public Fabrik()
     {
-        // Instanzvariable werden initialisiert
+        // Instanzvariablen werden initialisiert
         bestellzaehler = 0;
         bestellungen = new ArrayList<Bestellung>();
         lager = new Lager(0,0,0,0,0);
+        lieferant = new Lieferant();
         System.out.println("Fabrik erstellt");
     }
 
-    // Hier die Main-Methode
+    //Hier die Main-Methode
     public static void main(String[] args)
     {
         Fabrik fabrik = new Fabrik ();
@@ -39,8 +41,7 @@ public class Fabrik
         {System.out.println ("Error: Keine negativen Werte erlaubt");}
         
         else {
-        Bestellung bestellung = new Bestellung(stuehle, sofas, bestellzaehler++);
-        bestellung.gibBearbeitungszeit (lager);
+        Bestellung bestellung = new Bestellung(stuehle, sofas, bestellzaehler++, lager);
         bestellungen.add (bestellung);}
     }
 
@@ -51,15 +52,15 @@ public class Fabrik
         {
             String msg = "Bestellung " + bestellung.gibBestellnummer() + ": " 
             + bestellung.gibAnzahlStuehle() + " Stühle und " + bestellung.gibAnzahlSofa() 
-            + " Sofas. Dauert insgesamt "; //+ */ b.gibLieferzeit() */  + " minuten.";
+            + " Sofas. Lieferzeit insgesamt: " + bestellung.gibLieferzeit()  + " Tage.";
             
             System.out.println(msg);
         }
     }
 
-    // Hiermit kann die Fabrik sein Lager füllen
+    // Hiermit kann die Fabrik ihr Lager füllen
     public void lagerAuffüllen ()
     {
-        lager.lagerAuffüllen ();
+        lager.lagerAuffüllen (lieferant);
     }
 }

@@ -1,10 +1,8 @@
 #BlueJ class context
 comment0.target=Lieferant
-comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Lieferant.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment0.text=\ Die\ Materialien\ in\ den\ Arrays\ entsprechen\ der\ folgenden\ Reihenfolge\:\n\ \ \ \ \ \ \ \ [0]\ Holz,\n\ \ \ \ \ \ \ \ [1]\ Schrauben,\n\ \ \ \ \ \ \ \ [2]\ Farbe,\n\ \ \ \ \ \ \ \ [3]\ Kissen,\n\ \ \ \ \ \ \ \ [4]\ Karton\n
 comment1.params=
 comment1.target=Lieferant()
-comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Lieferant\n
 comment2.params=bestellMengen
 comment2.target=int[]\ bestellungAufgeben(int[])
-comment2.text=\n\ Ein\ Beispiel\ einer\ Methode\ -\ ersetzen\ Sie\ diesen\ Kommentar\ mit\ Ihrem\ eigenen\n\ \n\ @param\ \ y\ \ \ \ ein\ Beispielparameter\ f\u00FCr\ eine\ Methode\n\ @return\ \ \ \ \ \ \ \ die\ Summe\ aus\ x\ und\ y\n
 numComments=3

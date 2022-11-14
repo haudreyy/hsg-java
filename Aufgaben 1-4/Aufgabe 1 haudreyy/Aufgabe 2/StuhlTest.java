@@ -39,4 +39,11 @@ public class StuhlTest
     public void tearDown()
     {
     }
+
+    @Test
+    public void test1()
+    {
+        Stuhl stuhl1 = new Stuhl();
+    }
 }
+

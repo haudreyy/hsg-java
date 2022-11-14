@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Lager
-comment0.text=\ Die\ Materialien\ in\ den\ Arrays\ entsprechen\ der\ folgenden\ Reihenfolge\:\n\ \ \ \ \ \ \ \ [0]\ Holz,\n\ \ \ \ \ \ \ \ [1]\ Schrauben,\n\ \ \ \ \ \ \ \ [2]\ Farbe,\n\ \ \ \ \ \ \ \ [3]\ Kissen,\n\ \ \ \ \ \ \ \ [4]\ Karton\n
+comment0.text=\ Die\ Materialien\ in\ den\ Arrays\ entsprechen\ der\ folgenden\ Reihenfolge\:\n\ \ \ \ \ \ \ \ [0]\ Holz,\n\ \ \ \ \ \ \ \ [1]\ Schrauben,\n\ \ \ \ \ \ \ \ [2]\ Farbe,\n\ \ \ \ \ \ \ \ [3]\ Kissen,\n\ \ \ \ \ \ \ \ [4]\ Karton\ \n
 comment1.params=holzeinheiten\ schrauben\ farbeinheiten\ kissen\ karton
 comment1.target=Lager(int,\ int,\ int,\ int,\ int)
 comment1.text=\n\ Dieser\ Konstruktor\ erm\u00F6glicht\ die\ einfache\ Erstellung\ eines\ Lagers.\ \n\ Die\ Anzahl\ Materialien\ dieses\ Lagers\ m\u00FCssen\ eingegeben\ werden.\n
@@ -14,8 +14,8 @@ comment5.params=bestellung
 comment5.target=int\ gibBeschaffungszeit(Bestellung)
 comment6.params=bestellung
 comment6.target=int[]\ zubestellenMaterial(Bestellung)
-comment7.params=
-comment7.target=void\ lagerAuff\u00FCllen()
+comment7.params=lieferant
+comment7.target=void\ lagerAuff\u00FCllen(Lieferant)
 comment8.params=lieferung
 comment8.target=void\ lagerbefuellen(int[])
 numComments=9

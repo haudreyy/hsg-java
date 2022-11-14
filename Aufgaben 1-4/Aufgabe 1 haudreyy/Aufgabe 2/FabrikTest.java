@@ -41,12 +41,47 @@ public class FabrikTest
     }
 
     @Test
-    public void test1()
+    public void finalTest1()
     {
         Fabrik fabrik1 = new Fabrik();
         fabrik1.bestellungAufgeben(1, 3);
         fabrik1.bestellungAufgeben(2, 2);
         fabrik1.bestellungenAusgeben();
     }
+
+    @Test
+    public void finalTest2()
+    {
+        Fabrik testFabrik_1 = new Fabrik();
+        testFabrik_1.bestellungenAusgeben();
+        testFabrik_1.bestellungAufgeben(11, 2);
+        testFabrik_1.lagerAuffüllen();
+        testFabrik_1.bestellungAufgeben(3, 5);
+        testFabrik_1.bestellungenAusgeben();
+    }
+
+    @Test
+    public void finalTest3()
+    {
+        Fabrik fabrik1 = new Fabrik();
+        fabrik1.bestellungAufgeben(2, 3);
+        fabrik1.bestellungAufgeben(33, 22);
+        fabrik1.lagerAuffüllen();
+        fabrik1.bestellungenAusgeben();
+        fabrik1.bestellungAufgeben(2, 2);
+        fabrik1.bestellungenAusgeben();
+    }
+
+    @Test
+    public void finalTest_mehrereBestellungen()
+    {
+        Fabrik fabrik1 = new Fabrik();
+        fabrik1.bestellungAufgeben(2, 2);
+        fabrik1.bestellungAufgeben(4, 15);
+        fabrik1.bestellungAufgeben(10, 15);
+    }
 }
+
+
+
 
