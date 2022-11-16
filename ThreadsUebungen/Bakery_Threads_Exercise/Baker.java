@@ -51,12 +51,6 @@ public class Baker extends Thread
 
             }
     
-
-            
-            
-
-
-
             // TODO: Ex1.3 Check all produce in process
             // If any is processed, remove it
             // wenn produkt fertig ist, dann will man diese rausnehmen

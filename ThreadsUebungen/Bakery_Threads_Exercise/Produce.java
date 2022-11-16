@@ -29,6 +29,17 @@ public class Produce
         // TODO: Ex2 - Start the next production step
         // If the production sequence has a next producer, add produce to it
         // If the production sequence is empty, set isProcessed to true
+
+        if (!productionSequence.isEmpty())
+        {
+            Producer producer = productionSequence.poll();
+            producer.addProduce(this);} //this ist jetzt instanz von jetzigen Klasse
+
+            else { isProcessed = true; } //jetzt produkt fertig produziert
+        
+        
+
+        
     }
 
     public void setProductionTimes(HashMap<Producer, Integer> productionTimes) {
