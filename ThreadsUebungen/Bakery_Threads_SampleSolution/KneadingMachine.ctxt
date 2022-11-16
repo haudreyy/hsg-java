@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=KneadingMachine
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ DoeMachine\ here.\r\n\r\n\ @author\ Jonathan\ Gruss\r\n\ @version\ 15.11.22\r\n
+comment1.params=
+comment1.target=KneadingMachine()
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

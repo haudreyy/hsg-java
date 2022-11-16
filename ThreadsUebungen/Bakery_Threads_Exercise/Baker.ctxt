@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Baker
+comment0.text=\n\ Write\ a\ description\ of\ class\ Baker\ here.\n\n\ @author\ Jonathan\ Gruss\n\ @version\ 15.11.22\n
+comment1.params=
+comment1.target=Baker()
+comment2.params=produce
+comment2.target=void\ addProduce(Produce)
+comment3.params=
+comment3.target=void\ run()
+comment4.params=produce
+comment4.target=void\ setProductionSequence(Produce)
+numComments=5

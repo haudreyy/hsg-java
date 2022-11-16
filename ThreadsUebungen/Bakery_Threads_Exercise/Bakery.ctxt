@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Bakery
+comment0.text=\n\ Write\ a\ description\ of\ class\ Bakery\ here.\n\n\ @author\ Jonathan\ Gruss\n\ @version\ 15.11.22\n
+comment1.params=baker
+comment1.target=Bakery(Baker)
+comment2.params=produce
+comment2.target=void\ addProduce(Produce)
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

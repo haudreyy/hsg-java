@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ThreadUtil
+comment1.params=time
+comment1.target=void\ sleep(int)
+comment2.params=message
+comment2.target=void\ syncedPrintln(java.lang.String)
+numComments=3

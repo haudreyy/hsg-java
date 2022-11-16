@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Oven
+comment0.text=\n\ Write\ a\ description\ of\ class\ Oven\ here.\n\n\ @author\ Jonathan\ Gruss\n\ @version\ 15.11.22\n
+comment1.params=
+comment1.target=Oven()
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

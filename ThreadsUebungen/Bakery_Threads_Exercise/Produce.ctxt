@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Produce
+comment0.text=\n\ Abstract\ class\ Good\ -\ write\ a\ description\ of\ the\ class\ here\n\n\ @author\ Jonathan\ Gruss\n\ @version\ 15.11.22\n
+comment1.params=customer
+comment1.target=Produce(java.lang.String)
+comment2.params=productionSequence
+comment2.target=void\ setProductionSequence(java.util.LinkedList)
+comment3.params=
+comment3.target=void\ startNextProductionStep()
+comment4.params=productionTimes
+comment4.target=void\ setProductionTimes(java.util.HashMap)
+comment5.params=producer
+comment5.target=int\ getProductionTime(Producer)
+comment6.params=
+comment6.target=boolean\ isProcessed()
+comment7.params=
+comment7.target=java.lang.String\ getCustomer()
+numComments=8
