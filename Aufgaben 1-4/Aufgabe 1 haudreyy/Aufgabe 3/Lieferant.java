@@ -1,4 +1,5 @@
 
+
 /**
 * Die Klasse Lieferant nimmt Materialbestellungen aus dem Lager an und gibt Material zurück
  * 
@@ -29,3 +30,6 @@ public class Lieferant
         return bestellMengen;
     }
 }
+
+
+

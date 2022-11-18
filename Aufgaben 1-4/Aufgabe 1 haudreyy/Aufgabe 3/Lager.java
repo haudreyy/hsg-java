@@ -146,9 +146,6 @@ public class Lager
             lagerbestand[i] += lieferung[i];
         }
     }
-
-
-
 }
    
 
