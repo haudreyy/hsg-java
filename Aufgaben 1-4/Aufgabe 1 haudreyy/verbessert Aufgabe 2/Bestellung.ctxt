@@ -3,8 +3,8 @@ comment0.target=Bestellung
 comment0.text=\n\ *\ Die\ Klasse\ Bestellung\ erm\u00F6glicht\ Informationen\ \u00FCber\ diese\ zu\ erfassen\ und\ mit\ der\ Bestellung\ umzugehen.\n\ \n\ Wichtige\ Bemerkung\ bzgl.\ Begrifflichkeiten\:\n\ Beschaffungszeit\ \=\ die\ Zeit,\ die\ das\ Lager\ braucht\ um\ Material\ nachzubestellen\ beim\ Lieferant\ (entweder\ 0\ oder\ 2)\n\ Herstellungszeit\ (in\ der\ Aufgabenstellung\ "Produktionszeit")\=\ die\ Zeit,\ die\ die\ Firma\ braucht\ um\ die\ Bestellung\ zu\ bearbeiten\ und\ somit\ die\ St\u00FChle\ und\ Sofas\ herzustellen\n\ Bearbeitungszeit\ (in\ der\ Aufgabenstellung\ "Lieferzeit")\ \=\ die\ Summe\ aus\ Beschaffungszeit\ und\ Herstellungszeit,\ dh.\ so\ lange\ muss\ der\ Kunde\ mindestens\ auf\ seine\ Bestellung\ warten\n\ \n\ @author\ Gruppe\ 7\n\ @version\ 2.0\n
 comment1.params=stuehle\ sofas\ nummer
 comment1.target=Bestellung(int,\ int,\ int)
-comment2.params=holzeinheiten\ schrauben\ farbeinheiten\ kissen\ karton
-comment2.target=Lager\ erstelleLager(int,\ int,\ int,\ int,\ int)
+comment2.params=
+comment2.target=Lager\ erstelleLager()
 comment3.params=lager
 comment3.target=java.lang.String\ gibAuftragsbestaetigung(Lager)
 comment4.params=

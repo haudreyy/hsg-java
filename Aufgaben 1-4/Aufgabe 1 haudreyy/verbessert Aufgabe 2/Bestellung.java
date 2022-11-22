@@ -57,14 +57,19 @@ public class Bestellung
     }
 
     // Erstelle ein Lager, woraus das Material genommen werden kann
-    public Lager erstelleLager (int holzeinheiten, int schrauben, int farbeinheiten, int kissen, int karton)
+    public Lager erstelleLager ()
     {
         Lager lager;
+        int holzeinheiten = 0;
+        int schrauben = 0;
+        int farbeinheiten = 0;
+        int kissen = 0;
+        int karton = 0;
         lager = new Lager (holzeinheiten, schrauben, farbeinheiten, kissen, karton);
         return lager;
     }
 
-    // Gibt eine Bestellbestätigung aus
+    // Gibt eine Bestellbestätigung aus für das erstellte Lager
     public String gibAuftragsbestaetigung(Lager lager)
     {
         // Die Auftragsbestätigung prüft wie lange die Bestellung bearbeitet werden muss (inkl. Zeit für Materiallieferungen aus Lager)
