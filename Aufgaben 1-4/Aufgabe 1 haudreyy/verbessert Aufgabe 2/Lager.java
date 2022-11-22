@@ -19,11 +19,11 @@ import java.util.List;
 public class Lager
 {
     // Instanzvariablen - hier befinden sich die Instanzvariabeln, welche in der Klasse Lager genutzt werden
-    private int maxHolzeinheiten;
-    private int maxSchrauben;
-    private int maxFarbeinheiten;
-    private int maxKissen;
-    private int maxKarton;
+    private final static int maxHolzeinheiten = 1000;
+    private final static int maxSchrauben = 5000;
+    private final static int maxFarbeinheiten = 1000;
+    private final static int maxKissen= 100;
+    private final static int maxKarton = 1000;
     
     private int [] lagerbestand;
 
@@ -34,12 +34,6 @@ public class Lager
      */
     public Lager(int holzeinheiten, int schrauben, int farbeinheiten, int kissen, int karton)
     {
-        // Instanzvariable pro material wird initialisiert
-        maxHolzeinheiten = 1000;
-        maxSchrauben = 5000;
-        maxFarbeinheiten = 1000;
-        maxKissen = 100;
-        maxKarton = 1000;
         // Erstellt einen Array für das Lager mit den entsprechenden Materialmengen
         lagerbestand = new int[]{holzeinheiten, schrauben, farbeinheiten, kissen, karton} ;
     }
