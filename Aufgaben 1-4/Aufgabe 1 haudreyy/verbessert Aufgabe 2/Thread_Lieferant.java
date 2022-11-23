@@ -7,15 +7,12 @@
  */
 public class Thread_Lieferant extends Thread
 {
-    // Konstruktor
-    public Thread_Lieferant(String name) {
-        super(name);
+    // Konstruktor noch leer?
+    public Thread_Lieferant() 
+    {
     }
 
-
-    @Override
-
-/* public void run()
+ public void run()
     {
         System.out.println ("thread is running");
         try 
@@ -28,7 +25,6 @@ public class Thread_Lieferant extends Thread
         }
         System.out.println ("thread is back");
     } 
-*/
 
     public static void main (String args[])
     {

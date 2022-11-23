@@ -27,6 +27,8 @@ public class Lager
     
     private int [] lagerbestand;
 
+    private Lieferant lieferant;
+
 
     /**
      * Dieser Konstruktor ermöglicht die einfache Erstellung eines Lagers. 
@@ -36,6 +38,7 @@ public class Lager
     {
         // Erstellt einen Array für das Lager mit den entsprechenden Materialmengen
         lagerbestand = new int[]{holzeinheiten, schrauben, farbeinheiten, kissen, karton} ;
+        lieferant = new Lieferant();
     }
 
     // Diese Methode gibt den aktuellen Lagerbestand aus in die Konsole aus
@@ -124,8 +127,7 @@ public class Lager
         {
             zubestellenMaterial [x] = lagerGanzGefüllt [x] - lagerbestand [x];
         }
-        // Es wird ein Objekt der Klasse Lieferant erstellt
-        Lieferant lieferant = new Lieferant();
+
         // Dieses erhält das zu bestellende Material
         int[] lieferung = lieferant.bestellungAufgeben(zubestellenMaterial);
         // Das Lager wird gefüllt
