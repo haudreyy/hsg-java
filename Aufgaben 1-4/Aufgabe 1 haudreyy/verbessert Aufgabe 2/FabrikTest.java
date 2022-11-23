@@ -48,5 +48,19 @@ public class FabrikTest
         fabrik1.bestellungAufgeben(2, 2);
         fabrik1.bestellungenAusgeben();
     }
+
+    @Test
+    public void test2()
+    {
+        Fabrik fabrik1 = new Fabrik();
+        fabrik1.bestellungAufgeben(2, 2);
+        System.out.println("### Bestellung wurde aufgegeben");
+        fabrik1.bestellungenAusgeben();
+        System.out.println("### Lager wird gefüllt");
+        fabrik1.lagerAuffüllen();
+        fabrik1.bestellungenAusgeben();
+        System.out.println("### Bestellung mit gefülltem Lager");
+    }
 }
+
 

@@ -132,7 +132,7 @@ public class Lager
         lagerbefuellen(lieferung);
     }
 
-    // Das Lager wird befüllt
+    // Das Lager wird je nach Bedarf befüllt
     public void lagerbefuellen(int[] lieferung)
     {
         for (int i = 0; i < lagerbestand.length; i++)

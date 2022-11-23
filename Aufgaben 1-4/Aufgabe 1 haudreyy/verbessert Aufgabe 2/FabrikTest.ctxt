@@ -12,4 +12,6 @@ comment3.target=void\ tearDown()
 comment3.text=\n\ Gibt\ das\ Testger\u00FCst\ wieder\ frei.\n\n\ Wird\ nach\ jeder\ Testfall-Methode\ aufgerufen.\n
 comment4.params=
 comment4.target=void\ test1()
-numComments=5
+comment5.params=
+comment5.target=void\ test2()
+numComments=6

@@ -51,7 +51,7 @@ public class Fabrik
         {
             String msg = "Bestellung " + bestellung.gibBestellnummer() + ": " 
             + bestellung.gibAnzahlStuehle() + " Stühle und " + bestellung.gibAnzahlSofa() 
-            + " Sofas. Dauert insgesamt "; //+ */ b.gibLieferzeit() */  + " minuten.";
+            + " Sofas. Dauert insgesamt "+ bestellung.gibBearbeitungszeit (lager)  + " Minuten.";
             
             System.out.println(msg);
         }

@@ -94,9 +94,6 @@ public class Bestellung
         int beschaffungszeit;
         beschaffungszeit = lager.gibBeschaffungszeit(this);
 
-        // Die Beschaffungszeit ist in Tage und die Herstellungszeit in Stunden
-        System.out.println (" Die Lieferung ist in " + beschaffungszeit + " Tage und " + herstellungszeit + " Stunden lieferbar.");
-
         // Diese Methode gibt die Lieferzeit in Stunden aus
         beschaffungszeit = beschaffungszeit * 24;
         return herstellungszeit + beschaffungszeit;
