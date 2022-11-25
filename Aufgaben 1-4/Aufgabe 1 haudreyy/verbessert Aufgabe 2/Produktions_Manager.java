@@ -22,6 +22,11 @@ public class Produktions_Manager extends Thread
      */
     public Produktions_Manager()
     {
+        holzbearbeitungs_Roboter = new Holzbearbeitungs_Roboter();
+        montage_Roboter = new Montage_Roboter();
+        lackier_Roboter = new Lackier_Roboter();
+        verpackungs_Roboter = new Verpackungs_Roboter();
+        
         zuverarbeitenBestellung = new LinkedList<Bestellung>();
         inbearbeitungbestellung = new LinkedList<Bestellung>();
 
@@ -44,14 +49,35 @@ public class Produktions_Manager extends Thread
         inbearbeitungbestellung.add (bestellung);
     }
     
-     public void startNextProductionStep()
+    //zweiter Versuch
+    public void run()
     {
+        while (true)
+        {
+            Bestellung nextBestellung = zuverarbeitenBestellung.poll();
+            if(nextBestellung != null)
+            {
+                System.out.println ("in produktion gesetzt");
+                //ThreadUtil.syncedPrintln("Starting to process " + nextBestellung);
+                inbearbeitungbestellung.add(nextBestellung);
+                //setProductionSequence(nextBestellung);
+                //nextProduce.startNextProductionStep();
+            } else { System.out.println ("leer");}
+        }
+
+        /* 
+        // erster Versuch
         if (zuverarbeitenBestellung.size() > 0)
         {
             Bestellung bestellung = zuverarbeitenBestellung.poll();
             this.bestellungProduzieren (bestellung);
         }
-        else { System.out.println ("fertig produziert"); }
+        else { System.out.println ("keine Bestellung in Liste inbearbeitungbestellung"); } */
+    }
+
+    private void setProductionSequence(Bestellung bestellung)
+    {
+
     }
 
 

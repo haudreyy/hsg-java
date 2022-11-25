@@ -13,5 +13,5 @@ comment3.text=\n\ Gibt\ das\ Testger\u00FCst\ wieder\ frei.\n\n\ Wird\ nach\ jed
 comment4.params=
 comment4.target=void\ bestellung_aufgeben()
 comment5.params=
-comment5.target=void\ bestellung_produzieren()
+comment5.target=void\ run_test()
 numComments=6

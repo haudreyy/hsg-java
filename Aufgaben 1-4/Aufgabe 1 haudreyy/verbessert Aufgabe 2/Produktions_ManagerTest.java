@@ -48,14 +48,12 @@ public class Produktions_ManagerTest
         produkti1.bestellungInAuftragGeben(bestellu1);
     }
 
+
     @Test
-    public void bestellung_produzieren()
+    public void run_test()
     {
-        Bestellung bestellu1 = new Bestellung(2, 2, 1);
-        Produktions_Manager produkti1 = new Produktions_Manager();
-        produkti1.bestellungInAuftragGeben(bestellu1);
-        produkti1.startNextProductionStep();
     }
 }
+
 
 
