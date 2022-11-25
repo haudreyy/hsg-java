@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 
 /**
  * Beschreiben Sie hier die Klasse Produktions_Manager.
@@ -13,15 +14,17 @@ public class Produktions_Manager extends Thread
     private Lackier_Roboter lackier_Roboter;
     private Verpackungs_Roboter verpackungs_Roboter;
 
-    private int x;
+    private LinkedList <Bestellung> zuverarbeitenBestellung;
+    private LinkedList <Bestellung> inbearbeitungbestellung;
 
     /**
      * Konstruktor für Objekte der Klasse Produktions_Manager
      */
     public Produktions_Manager()
     {
-        // Instanzvariable initialisieren
-        x = 0;
+        zuverarbeitenBestellung = new LinkedList<Bestellung>();
+        inbearbeitungbestellung = new LinkedList<Bestellung>();
+
     }
 
     /**
@@ -30,9 +33,26 @@ public class Produktions_Manager extends Thread
      * @param  y    ein Beispielparameter für eine Methode
      * @return        die Summe aus x und y
      */
-    public int beispielMethode(int y)
+    
+    public void bestellungInAuftragGeben (Bestellung bestellung)
     {
-        // tragen Sie hier den Code ein
-        return x + y;
+        zuverarbeitenBestellung.add (bestellung);
     }
+
+    public void bestellungProduzieren (Bestellung bestellung)
+    {
+        inbearbeitungbestellung.add (bestellung);
+    }
+    
+     public void startNextProductionStep()
+    {
+        if (zuverarbeitenBestellung.size() > 0)
+        {
+            Bestellung bestellung = zuverarbeitenBestellung.poll();
+            this.bestellungProduzieren (bestellung);
+        }
+        else { System.out.println ("fertig produziert"); }
+    }
+
+
 }
