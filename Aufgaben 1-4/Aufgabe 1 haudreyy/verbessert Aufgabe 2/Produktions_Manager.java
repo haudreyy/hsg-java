@@ -17,6 +17,7 @@ public class Produktions_Manager extends Thread
     private LinkedList <Bestellung> zuverarbeitenBestellung;
     private LinkedList <Bestellung> inbearbeitungbestellung;
 
+
     /**
      * Konstruktor für Objekte der Klasse Produktions_Manager
      */
@@ -29,7 +30,6 @@ public class Produktions_Manager extends Thread
         
         zuverarbeitenBestellung = new LinkedList<Bestellung>();
         inbearbeitungbestellung = new LinkedList<Bestellung>();
-
     }
 
     /**
@@ -57,7 +57,7 @@ public class Produktions_Manager extends Thread
             Bestellung nextBestellung = zuverarbeitenBestellung.poll();
             if(nextBestellung != null)
             {
-                System.out.println ("in produktion gesetzt");
+                System.out.println ("Bestellung " + nextBestellung.gibBestellnummer() + " wird verarbeitet.");
                 //ThreadUtil.syncedPrintln("Starting to process " + nextBestellung);
                 inbearbeitungbestellung.add(nextBestellung);
                 //setProductionSequence(nextBestellung);

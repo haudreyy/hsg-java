@@ -11,6 +11,7 @@ public class Fabrik
     private ArrayList <Bestellung> bestellungen;
     private int bestellzaehler;
     private Lager lager;
+    private Produktions_Manager produktionsManager;
     
     /**
      * Konstruktor für Objekte der Klasse Fabrik
@@ -23,6 +24,8 @@ public class Fabrik
         bestellungen = new ArrayList<Bestellung>();
         lager = new Lager(0,0,0,0,0);
         System.out.println("Fabrik erstellt");
+
+        produktionsManager = new Produktions_Manager();
     }
 
     // Hier die Main-Methode
@@ -42,6 +45,9 @@ public class Fabrik
         Bestellung bestellung = new Bestellung(stuehle, sofas, bestellzaehler++);
         bestellung.gibBearbeitungszeit (lager);
         bestellungen.add (bestellung);}
+
+        // Bestellung wird der LinkedList bestellungInAuftragGeben hinzugefügt
+        // produktionsManager.bestellungInAuftragGeben ();
     }
 
     // Diese Methode gibt die vorhandenen Bestellungen aus
@@ -60,6 +66,6 @@ public class Fabrik
     // Hiermit kann die Fabrik sein Lager füllen
     public void lagerAuffüllen ()
     {
-        lager.lagerAuffüllen ();
+        lager.wareBestellen ();
     }
 }

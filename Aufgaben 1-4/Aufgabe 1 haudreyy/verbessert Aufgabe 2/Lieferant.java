@@ -15,32 +15,24 @@
  */
 public class Lieferant extends Thread
 {
+    private Lager lager;
     // Es gibt keine besonderen Instanzvariabeln
     // Der Konstruktor ist hier nicht besonders
-    public Lieferant()
+    public Lieferant( Lager lager)
     {
+        this.lager = lager;
     }
 
-    // Bestellungen werden hier aufgegeben
-    public int[] bestellungAufgeben(int[] bestellMengen)
+    @Override
+    public void run ()
     {
-
-        System.out.println ("thread is running");
-        // Lieferant wird auf schlafen gesetzt
-        try 
-        {
-            Lieferant.sleep(2000);
-        } 
-        catch (Exception e) 
-        {
-            e.printStackTrace();
+        System.out.println("ok let me check");
+        try {
+            Thread.sleep(2000);
+        } catch (Exception e) {
         }
-        // Lieferant wieder wach
-        System.out.println ("thread is back");
-        // Ware geliefert
-        System.out.println("Lieferant liefert " + bestellMengen[0] + " Holz, " + bestellMengen[1] +" Schrauben, "
-        + bestellMengen[2] + " Farbe, " + bestellMengen[3] + " Kissen und " + bestellMengen[4] + " Karton.");
-        return bestellMengen;
-    }
+        System.out.println("da ist deine Lieferung");
 
+        lager.wareEmpfangen();
+    }
 }

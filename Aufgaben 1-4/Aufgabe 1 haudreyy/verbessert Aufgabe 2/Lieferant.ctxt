@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Lieferant
 comment0.text=\ Die\ Materialien\ in\ den\ Arrays\ entsprechen\ der\ folgenden\ Reihenfolge\:\n\ \ \ \ \ \ \ \ [0]\ Holz,\n\ \ \ \ \ \ \ \ [1]\ Schrauben,\n\ \ \ \ \ \ \ \ [2]\ Farbe,\n\ \ \ \ \ \ \ \ [3]\ Kissen,\n\ \ \ \ \ \ \ \ [4]\ Karton\n
-comment1.params=
-comment1.target=Lieferant()
-comment2.params=bestellMengen
-comment2.target=int[]\ bestellungAufgeben(int[])
+comment1.params=lager
+comment1.target=Lieferant(Lager)
+comment2.params=
+comment2.target=void\ run()
 numComments=3

@@ -91,14 +91,14 @@ public class LagerTest
     public void testLagerauffüllen()
     {
         Lager lager1 = new Lager(0, 0, 0, 0, 0);
-        lager1.lagerAuffüllen();
+        lager1.wareBestellen();
     }
 
     @Test
     public void testLagerauffüllenEinzeln()
     {
         Lager lager1 = new Lager(200, 100, 35, 22, 1000);
-        lager1.lagerAuffüllen();
+        lager1.wareBestellen();
     }
 }
 

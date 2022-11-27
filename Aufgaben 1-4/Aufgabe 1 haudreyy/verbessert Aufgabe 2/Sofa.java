@@ -23,6 +23,8 @@ public class Sofa extends Produkt
      */
     public Sofa()
     {
+        produktionsSchritte = new boolean [] {false,false,false,false};
+        meinTyp = Produkttyp.Sofa;
     }
 
     // Verschiedene get-Methoden

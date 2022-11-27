@@ -22,6 +22,8 @@
      */
     public Stuhl()
     {
+        produktionsSchritte = new boolean [] {false,false,false,false};
+        meinTyp = Produkttyp.Stuhl;
     }
 
     // Verschiedene get-Methoden

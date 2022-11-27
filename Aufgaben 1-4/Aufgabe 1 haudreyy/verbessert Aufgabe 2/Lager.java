@@ -38,7 +38,7 @@ public class Lager
     {
         // Erstellt einen Array für das Lager mit den entsprechenden Materialmengen
         lagerbestand = new int[]{holzeinheiten, schrauben, farbeinheiten, kissen, karton} ;
-        lieferant = new Lieferant();
+        lieferant = new Lieferant(this);
     }
 
     // Diese Methode gibt den aktuellen Lagerbestand aus in die Konsole aus
@@ -117,7 +117,7 @@ public class Lager
     }
   
     // Diese Methode füllt das Lager komplett auf.
-    public void lagerAuffüllen ()
+    public void wareEmpfangen ()
     {
         int [] lagerGanzGefüllt = {maxHolzeinheiten, maxSchrauben, maxFarbeinheiten, maxKissen, maxKarton};
         int [] zubestellenMaterial = new int[5];
@@ -128,15 +128,20 @@ public class Lager
             zubestellenMaterial [x] = lagerGanzGefüllt [x] - lagerbestand [x];
         }
 
-        // Dieses erhält das zu bestellende Material
-        int[] lieferung = lieferant.bestellungAufgeben(zubestellenMaterial);
-        // Das Lager wird gefüllt
-        lagerbefuellen(lieferung);
+        lagerbefuellen(zubestellenMaterial);
+
+    }
+
+    public void wareBestellen()
+    {
+        lieferant = new Lieferant(this);
+        lieferant.start();
     }
 
     // Das Lager wird je nach Bedarf befüllt
     public void lagerbefuellen(int[] lieferung)
     {
+        System.out.println("ich habe folgende Lieferung erhalten: " + lieferung[0]);
         for (int i = 0; i < lagerbestand.length; i++)
         {
             lagerbestand[i] += lieferung[i];

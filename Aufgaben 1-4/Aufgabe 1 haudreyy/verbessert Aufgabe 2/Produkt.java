@@ -8,7 +8,13 @@ import java.util.ArrayList;
  */
 public class Produkt
 {
+    enum Produkttyp {
+        Stuhl,
+        Sofa
+      }
     public String meinZustand;
+    public boolean [] produktionsSchritte;
+    public Produkttyp meinTyp;
 
     /**
      * Konstruktor für Objekte der Klasse Produkt
@@ -25,6 +31,8 @@ public class Produkt
     {
         meinZustand = neuerZustand;
     }
+
+
 
     // Diese Methode gibt den Zustand
     public String gibZustand()
