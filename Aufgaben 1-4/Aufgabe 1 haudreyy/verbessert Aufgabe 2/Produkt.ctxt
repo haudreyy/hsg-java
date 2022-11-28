@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Produkt
-comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Fabrik.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment0.text=\n\ Die\ abstrakte\ Klasse\ Produkt\ erm\u00F6glicht\ die\ Vererbung\ von\ Methoden\ durch\ konkrete\ Produkte.\n\ \n\ @author\ Gruppe\ 7\n\ @version\ 2.0\n
 comment1.params=
 comment1.target=Produkt()
-comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Fabrik\n
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Produkt\n\ Der\ Zustand\ wird\ hier\ in\ Form\ eines\ Strings\ angegeben.\ Sp\u00E4ter\ und\ wenn\ n\u00F6tig\ kann\ man\ diesen\ anhand\ eines\ Integers\ angeben.\n\ Daf\u00FCr\ sollte\ man\ genauer\ wissen\ was\ f\u00FCr\ Zust\u00E4nde\ angenommen\ werden\ k\u00F6nnen\ (z.B.\ 0\=unfertig,\ 1\=in\ Produktion,\ 2\=fertig).\n
 comment2.params=neuerZustand
 comment2.target=void\ setZustand(java.lang.String)
 comment3.params=
