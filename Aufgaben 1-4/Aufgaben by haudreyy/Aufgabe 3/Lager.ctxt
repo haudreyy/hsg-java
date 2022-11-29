@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Lager
+comment0.text=\ Die\ Materialien\ in\ den\ Arrays\ entsprechen\ der\ folgenden\ Reihenfolge\:\n\ \ \ \ \ \ \ \ [0]\ Holz,\n\ \ \ \ \ \ \ \ [1]\ Schrauben,\n\ \ \ \ \ \ \ \ [2]\ Farbe,\n\ \ \ \ \ \ \ \ [3]\ Kissen,\n\ \ \ \ \ \ \ \ [4]\ Karton\n
+comment1.params=holzeinheiten\ schrauben\ farbeinheiten\ kissen\ karton
+comment1.target=Lager(int,\ int,\ int,\ int,\ int)
+comment1.text=\n\ Dieser\ Konstruktor\ erm\u00F6glicht\ die\ einfache\ Erstellung\ eines\ Lagers.\ \n\ Die\ Anzahl\ Materialien\ dieses\ Lagers\ m\u00FCssen\ eingegeben\ werden.\n
+comment2.params=
+comment2.target=void\ lagerBestandAusgeben()
+comment3.params=bedarf_je_material
+comment3.target=int\ gibBeschaffungszeit(int[])
+comment4.params=benoetigtesMaterial
+comment4.target=boolean\ genugMaterialVorhanden(int[])
+comment5.params=
+comment5.target=void\ lagerAuffuellen()
+comment6.params=materialBestellung
+comment6.target=void\ materialBestellen(int[])
+comment7.params=lieferung
+comment7.target=void\ lagerbefuellen(int[])
+numComments=8
