@@ -32,7 +32,7 @@ public class Produktions_Manager extends Thread
         
         inBearbeitung = new LinkedList<Bestellung>();
         inProduktion = new LinkedList<Bestellung>();
-        produkteinProduktion = new LinkedList<Produkte>();
+        produkteinProduktion = new LinkedList<Produkt>();
     }
     
     
