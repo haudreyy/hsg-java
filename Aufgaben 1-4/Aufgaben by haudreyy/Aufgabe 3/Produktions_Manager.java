@@ -51,26 +51,49 @@ public class Produktions_Manager extends Thread
 
     }
 
-    
-    public void run()
+    public void run(Lager lager)
     {
         // checken ob Liste inBearbeitung Elemente hat
-        if (inBearbeitung.size() > 0)
+        while (true)
         {
+            if (inBearbeitung.size() > 0)
+            {
             // checken ob genug im Lager
             Bestellung bestellung = inBearbeitung.getFirst();
             int benötigteStühle = bestellung.gibAnzahlStuehle();
             int benötigteSofas = bestellung.gibAnzahlSofa();
 
+            
             int [] bedarf_je_material = bestellung.berechneBedarf(benötigteStühle,benötigteSofas);
-            System.out.println ("" + bedarf_je_material [0] + bedarf_je_material [1]);
+            boolean genug = lager.genugMaterialVorhanden(bedarf_je_material);
+            System.out.println ("" + genug);
 
-            //boolean genugHolz = Lager.genugMaterialVorhanden();
+            // wenn nicht genug, Lager füllen
+            if (genug == false)
+            {
+                boolean warteAufLieferant = lager.lagerAuffuellen();
+                System.out.println("Lager wird zuerst gefüllt");
+                if (warteAufLieferant == false)
+                {
+                    System.out.println ("Lieferung angekommen");
+                }
+                else { }
 
-            //Bestellung bestellung = inBearbeitung.poll();
+            }
+            
+            // wenn genug checken, Bestellung weitergeben an inProduktion
+            else 
+            {
+                bestellung = inBearbeitung.poll();
+            inProduktion.add(bestellung);
+            System.out.println("Bestellung jetzt inProduktion");
+            System.out.println ("" + inBearbeitung.size());
+            }
+            }    
+
         }
         
-        else {}
+
         
         
         /* 
@@ -95,13 +118,10 @@ public class Produktions_Manager extends Thread
             this.bestellungProduzieren (bestellung);
         }
         else { System.out.println ("keine Bestellung in Liste inbearbeitungbestellung"); } 
-    }
-
-    private void setProductionSequence(Bestellung bestellung)
-    {
-
-    }*/
+    } */
 
     }
+
+
 }
 

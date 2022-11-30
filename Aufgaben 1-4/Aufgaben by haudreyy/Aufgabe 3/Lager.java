@@ -84,16 +84,23 @@ public class Lager
         return true;
     }
 
-    public void lagerAuffuellen()
+    public boolean lagerAuffuellen()
     {
         int [] materialbestellung = new int[lagerbestand.length];
+        boolean warteAufLieferant = true;
 
         for (int i = 0; i < lagerbestand.length; i++)
         {
             materialbestellung[i] = maximalBestand[i]-lagerbestand[i];
         }
-        // und bestelle das material
+        // und bestelle das Material
         materialBestellen(materialbestellung);
+        if (lagerbestand [0] == 1000)
+        {
+            warteAufLieferant = false;
+        }
+        
+        return warteAufLieferant;
     }
 
     public void materialBestellen(int[] materialBestellung)
