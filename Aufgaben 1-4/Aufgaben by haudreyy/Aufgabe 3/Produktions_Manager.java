@@ -71,26 +71,19 @@ public class Produktions_Manager extends Thread
             // wenn nicht genug, Lager füllen
             if (genug == false)
             {
-                boolean warteAufLieferant = lager.lagerAuffuellen();
+                lager.lagerAuffuellen();
                 System.out.println("Lager wird zuerst gefüllt");
-                if (warteAufLieferant == false)
-                {
-                    System.out.println ("Lieferung angekommen");
-                }
-                else { }
-
+        
             }
-            
             // wenn genug checken, Bestellung weitergeben an inProduktion
             else 
             {
                 bestellung = inBearbeitung.poll();
-            inProduktion.add(bestellung);
-            System.out.println("Bestellung jetzt inProduktion");
-            System.out.println ("" + inBearbeitung.size());
+                inProduktion.add(bestellung);
+                System.out.println("Bestellung jetzt inProduktion");
+                System.out.println ("" + inBearbeitung.size());
             }
             }    
-
         }
         
 

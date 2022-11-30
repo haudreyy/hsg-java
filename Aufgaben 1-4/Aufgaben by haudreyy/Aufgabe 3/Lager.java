@@ -28,6 +28,8 @@ public class Lager
     private int [] maximalBestand = {maxHolzeinheiten, maxSchrauben, maxFarbeinheiten, maxKissen, maxKarton};
     
     private int [] lagerbestand;
+
+    public boolean warteAufLieferant;
     
     /**
      * Dieser Konstruktor ermöglicht die einfache Erstellung eines Lagers. 
@@ -84,10 +86,10 @@ public class Lager
         return true;
     }
 
-    public boolean lagerAuffuellen()
+    public void lagerAuffuellen()
     {
+        warteAufLieferant = false;
         int [] materialbestellung = new int[lagerbestand.length];
-        boolean warteAufLieferant = true;
 
         for (int i = 0; i < lagerbestand.length; i++)
         {
@@ -95,12 +97,8 @@ public class Lager
         }
         // und bestelle das Material
         materialBestellen(materialbestellung);
-        if (lagerbestand [0] == 1000)
-        {
-            warteAufLieferant = false;
-        }
+        warteAufLieferant = true;
         
-        return warteAufLieferant;
     }
 
     public void materialBestellen(int[] materialBestellung)
