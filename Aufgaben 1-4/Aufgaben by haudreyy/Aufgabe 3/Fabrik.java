@@ -25,7 +25,7 @@ public class  Fabrik
         lager = new Lager(0,0,0,0,0);
         System.out.println("Fabrik erstellt");
 
-        produktionsManager = new Produktions_Manager();
+        produktionsManager = new Produktions_Manager(lager);
         //produktionsManager.start();
     } 
 

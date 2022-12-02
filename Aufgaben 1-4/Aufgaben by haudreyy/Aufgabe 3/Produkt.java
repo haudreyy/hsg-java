@@ -6,15 +6,18 @@ import java.util.ArrayList;
  * @author Gruppe 7
  * @version 2.0
  */
-public class Produkt
+public class Produkt 
 {
     enum Produkttyp {
         Stuhl,
         Sofa
       }
-    public String meinZustand;
-    public boolean [] produktionsSchritte;
+    public String meinZustand; // brauchen wir nicht
+
     public Produkttyp meinTyp;
+    public int aktuellerProduktionsSchritt;
+    public Roboter.RoboterTyp[] produktionsAblauf;  // in den subklassen im constructor machen
+    public int [] produktionsDauer; // in den subklassen im constructor machen
 
     /**
      * Konstruktor für Objekte der Klasse Produkt
@@ -23,7 +26,9 @@ public class Produkt
      */
     public Produkt()
     {
+        aktuellerProduktionsSchritt = 0;
         meinZustand = "bestellt";
+
     }
 
     // Diese Methode ändert den Zustand

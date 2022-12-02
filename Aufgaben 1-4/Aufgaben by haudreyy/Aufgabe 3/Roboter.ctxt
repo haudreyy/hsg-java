@@ -1,16 +1,12 @@
 #BlueJ class context
 comment0.target=Roboter
 comment0.text=\n\ Abstrakte\ Klasse\ Roboter\ -\ beschreiben\ Sie\ hier\ die\ Klasse\n\ \n\ @author\ (Ihr\ Name)\n\ @version\ (eine\ Version-Nummer\ oder\ ein\ Datum)\n
-comment1.params=name
-comment1.target=Roboter(java.lang.String)
+comment1.params=name\ pm
+comment1.target=Roboter(java.lang.String,\ Produktions_Manager)
 comment2.params=
 comment2.target=void\ run()
 comment3.params=produkt
 comment3.target=void\ fuegeProduktHinzu(Produkt)
-comment4.params=zeit
-comment4.target=void\ setzteProduktionsZeit(int)
-comment5.params=produkt
-comment5.target=void\ produziereProdukt(Produkt)
-comment6.params=
-comment6.target=java.lang.String\ gibNamen()
-numComments=7
+comment4.params=produkt
+comment4.target=void\ produziereProdukt(Produkt)
+numComments=5

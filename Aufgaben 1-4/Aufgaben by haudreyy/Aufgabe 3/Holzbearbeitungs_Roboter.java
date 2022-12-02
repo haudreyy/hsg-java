@@ -5,23 +5,17 @@
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Holzbearbeitungs_Roboter
+public class Holzbearbeitungs_Roboter extends Roboter
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
 
     /**
      * Konstruktor für Objekte der Klasse Holzbearbeitungs_Roboter
      */
-    public Holzbearbeitungs_Roboter()
+    public Holzbearbeitungs_Roboter(Produktions_Manager pm)
     {
-        // Instanzvariable initialisieren
+        super("Holzbearbeitungsroboter", pm);
+        this.meinTyp = RoboterTyp.Holzverarbeitung; 
     }
-
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
 
 }

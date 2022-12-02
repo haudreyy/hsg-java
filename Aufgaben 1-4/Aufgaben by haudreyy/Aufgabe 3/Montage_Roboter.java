@@ -1,11 +1,12 @@
 
+
 /**
  * Beschreiben Sie hier die Klasse Montage_Roboter.
  * 
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Montage_Roboter
+public class Montage_Roboter extends Roboter
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private int x;
@@ -13,10 +14,10 @@ public class Montage_Roboter
     /**
      * Konstruktor für Objekte der Klasse Montage_Roboter
      */
-    public Montage_Roboter()
+    public Montage_Roboter(Produktions_Manager pm)
     {
-        // Instanzvariable initialisieren
-        x = 0;
+        super("Montageroboter", pm);
+        this.meinTyp = RoboterTyp.Montage; 
     }
 
     /**

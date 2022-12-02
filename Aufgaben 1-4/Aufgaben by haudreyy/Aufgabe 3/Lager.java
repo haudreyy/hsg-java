@@ -88,17 +88,19 @@ public class Lager
 
     public void lagerAuffuellen()
     {
-        warteAufLieferant = false;
-        int [] materialbestellung = new int[lagerbestand.length];
-
-        for (int i = 0; i < lagerbestand.length; i++)
+        if (!warteAufLieferant)
         {
-            materialbestellung[i] = maximalBestand[i]-lagerbestand[i];
+            warteAufLieferant = true;
+            int [] materialbestellung = new int[lagerbestand.length];
+
+            for (int i = 0; i < lagerbestand.length; i++)
+            {
+                materialbestellung[i] = maximalBestand[i]-lagerbestand[i];
+            }
+            // und bestelle das Material
+            
+            materialBestellen(materialbestellung);
         }
-        // und bestelle das Material
-        materialBestellen(materialbestellung);
-        warteAufLieferant = true;
-        
     }
 
     public void materialBestellen(int[] materialBestellung)
@@ -110,18 +112,39 @@ public class Lager
     // Das Lager wird je nach Bedarf befüllt
     public void lagerbefuellen(int[] lieferung)
     {
+        String msg = "Lager hat folgende Lieferung erhalten: "
+        +lieferung [0]+ " an Holz, "
+        +lieferung [1]+ " an Schrauben, "
+        +lieferung [2]+ " an Farbe, "
+        +lieferung [3]+ " an Kissen, " 
+        +lieferung [4]+ " an Karton.";
+        System.out.println(msg);
+
         for (int i = 0; i < lagerbestand.length; i++)
         {
             lagerbestand[i] += lieferung[i];
         }
-        System.out.print ("Lager hat folgende Lieferung erhalten: ");
-        System.out.print (lieferung [0]+ " an Holz, ");
-        System.out.print (lieferung [1]+ " an Schrauben, ");
-        System.out.print (lieferung [2]+ " an Farbe, ");
-        System.out.print (lieferung [3]+ " an Kissen, ");
-        System.out.print (lieferung [4]+ " an Karton.");
-        System.out.println();
+        warteAufLieferant = false;   
     }
+
+    public void lagerbelasten (int [] materialFuerProduktion)
+    {
+        //System.out.println ("alt" + lagerbestand[0] + ", "  + lagerbestand[1] +", " + lagerbestand[2] + ", " +lagerbestand[3] + ", " +lagerbestand[4]);
+        int [] neuLagerbestand = new int [lagerbestand.length];
+
+        for (int i = 0; i < lagerbestand.length; i++ )
+        {
+            neuLagerbestand [i] = lagerbestand [i] - materialFuerProduktion [i];
+            if (neuLagerbestand [i] < 0)
+            {
+                System.out.println ("Error: Der Lagerbestand ist zu klein");
+            }
+        }
+        lagerbestand = neuLagerbestand;
+        System.out.println ("Lagerbestand neu: " + lagerbestand[0] + ", " + lagerbestand[1] + ", " +lagerbestand[2] + ", " +lagerbestand[3] + ", " +lagerbestand[4]);
+
+    }
+
 }
    
 

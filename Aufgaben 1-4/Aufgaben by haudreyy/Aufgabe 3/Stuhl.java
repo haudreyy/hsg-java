@@ -22,9 +22,17 @@
      */
     public Stuhl()
     {
-        produktionsSchritte = new boolean [] {false,false,false,false};
+        produktionsAblauf =  new Roboter.RoboterTyp[]{
+            Roboter.RoboterTyp.Holzverarbeitung,
+            Roboter.RoboterTyp.Montage,
+            Roboter.RoboterTyp.Lackierung,
+            Roboter.RoboterTyp.Verpackung};  
+
+        produktionsDauer = new int [] {10, 5, 2, 5}; // Dauer Produktionsschritte in Minuten
+
         meinTyp = Produkttyp.Stuhl;
     }
+
 
     // Verschiedene get-Methoden
     public static int gibHolz () {return holz;}

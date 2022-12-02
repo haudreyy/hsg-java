@@ -6,17 +6,17 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * Die Test-Klasse LagerTest.
+ * Die Test-Klasse StuhlTest.
  *
  * @author  (Ihr Name)
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class LagerTest
+public class StuhlTest
 {
     /**
-     * Konstruktor fuer die Test-Klasse LagerTest
+     * Konstruktor fuer die Test-Klasse StuhlTest
      */
-    public LagerTest()
+    public StuhlTest()
     {
     }
 
@@ -41,20 +41,15 @@ public class LagerTest
     }
 
     @Test
-    public void test_lagerleer()
+    public void test_angabenAusgeben()
     {
-        Lager lager1 = new Lager(1, 1, 1, 1, 1);
-        lager1.lagerAuffuellen();
-        lager1.lagerBestandAusgeben();
-    }
-
-    @Test
-    public void test_lagerbestand()
-    {
-        Lager lager1 = new Lager(12, 11, 2, 1, 0);
+        Stuhl stuhl = new Stuhl();
+        System.out.println ("" + stuhl.produktionsAblauf [0] + ", " + stuhl.produktionsAblauf [1] + ", "
+        + stuhl.produktionsAblauf [2] + ", " + stuhl.produktionsAblauf [3]);
         
-        lager1.lagerbelasten (new int [] {5,5,5,5,5});
+        System.out.println ("" + stuhl.produktionsDauer [0] + ", " +stuhl.produktionsDauer [1]
+        + ", " +stuhl.produktionsDauer [2]+ ", " +stuhl.produktionsDauer [3]);
+        
     }
 }
-
 

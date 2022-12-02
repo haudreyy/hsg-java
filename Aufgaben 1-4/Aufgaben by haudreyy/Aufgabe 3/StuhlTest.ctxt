@@ -1,9 +1,9 @@
 #BlueJ class context
-comment0.target=LagerTest
-comment0.text=\n\ Die\ Test-Klasse\ LagerTest.\n\n\ @author\ \ (Ihr\ Name)\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment0.target=StuhlTest
+comment0.text=\n\ Die\ Test-Klasse\ StuhlTest.\n\n\ @author\ \ (Ihr\ Name)\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
 comment1.params=
-comment1.target=LagerTest()
-comment1.text=\n\ Konstruktor\ fuer\ die\ Test-Klasse\ LagerTest\n
+comment1.target=StuhlTest()
+comment1.text=\n\ Konstruktor\ fuer\ die\ Test-Klasse\ StuhlTest\n
 comment2.params=
 comment2.target=void\ setUp()
 comment2.text=\n\ \ Setzt\ das\ Testger\u00FCst\ fuer\ den\ Test.\n\n\ Wird\ vor\ jeder\ Testfall-Methode\ aufgerufen.\n
@@ -11,7 +11,5 @@ comment3.params=
 comment3.target=void\ tearDown()
 comment3.text=\n\ Gibt\ das\ Testger\u00FCst\ wieder\ frei.\n\n\ Wird\ nach\ jeder\ Testfall-Methode\ aufgerufen.\n
 comment4.params=
-comment4.target=void\ test_lagerleer()
-comment5.params=
-comment5.target=void\ test_lagerbestand()
-numComments=6
+comment4.target=void\ test_angabenAusgeben()
+numComments=5

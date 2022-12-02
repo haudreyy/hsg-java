@@ -12,13 +12,14 @@ public class Verpackungs_Roboter extends Roboter
     /**
      * Konstruktor für Objekte der Klasse Verpackungs_Roboter
      */
-    public Verpackungs_Roboter()
+    public Verpackungs_Roboter(Produktions_Manager pm)
     {
-        // weil wir eine superclass haben müssen wir den constructor von der klasse callen
-        // siehe https://stackoverflow.com/questions/31397885/must-explicitly-invoke-another-constructor
-        super("Verpackungsroboter");
-        this.meinTyp = RoboterTyp.Verpackung;
+        super("Verpackungsroboter", pm);
+        this.meinTyp = RoboterTyp.Verpackung; 
     }
+
+    // diese Methode schaut, was zuletzt produziert wurde
+    // public Produkt gibZuletztProduziert () { }
 
     /**
      * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen

@@ -23,7 +23,15 @@ public class Sofa extends Produkt
      */
     public Sofa()
     {
-        produktionsSchritte = new boolean [] {false,false,false,false};
+        produktionsAblauf =  new Roboter.RoboterTyp[]{
+            Roboter.RoboterTyp.Holzverarbeitung,
+            Roboter.RoboterTyp.Lackierung,
+            Roboter.RoboterTyp.Montage,
+            Roboter.RoboterTyp.Verpackung};
+
+        produktionsDauer = new int [] {30, 5, 15, 10}; // Dauer Produktionsschritte in Minuten
+        
+        
         meinTyp = Produkttyp.Sofa;
     }
 

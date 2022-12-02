@@ -90,12 +90,14 @@ public class Bestellung
         // Bedarf in einem Array zusammengefasst
         int [] bedarf_je_material = {holzbedarf, schraubenbedarf, farbbedarf, kissenbedarf, kartonbedarf};
 
+        /*
         System.out.print ("Bestellung " + bestellnummer + ": Es wird folgendes Material benötigt:");
         System.out.print (bedarf_je_material [0]+ " an Holz, ");
         System.out.print (bedarf_je_material [1]+ " an Schrauben, ");
         System.out.print (bedarf_je_material [2]+ " an Farbe, ");
         System.out.print (bedarf_je_material [3]+ " an Kissen, ");
         System.out.println (bedarf_je_material [4]+ " an Karton. ");
+        */
 
         return bedarf_je_material;
     }
@@ -125,4 +127,5 @@ public class Bestellung
     {
         return anzahlSofa;
     }
+
 }

@@ -14,57 +14,71 @@ public abstract class Roboter extends Thread
         Montage,
         Verpackung
     }
-    private LinkedList<Produkt> warteschlange;
-    private String name;
-    private int produktionsZeit;
-    private boolean busy;
+    private LinkedList<Produkt> warteschlange;       
+    String name; 
+    private Produktions_Manager produktionsManager; 
+    // wir nehmen einach mal stuhl als 'erstes letztes produkt'   
+    private Produkt.Produkttyp letztesProdukt =  Produkt.Produkttyp.Stuhl; 
+ 
     public RoboterTyp meinTyp;
  
-    public Roboter(String name)
+    public Roboter(String name, Produktions_Manager pm)
     {
+        this.produktionsManager = pm; 
         this.name = name;
+        warteschlange = new LinkedList<Produkt>();
+
     }
 
     public void run()
     {
-        while (true)
+        System.out.println(this.name + " gestartet.");
+        while (true) 
         {
-            if (warteschlange.size() > 0)
+            Produkt nextProdukt = warteschlange.poll();
+            if (nextProdukt != null) 
             {
-                produziereProdukt(warteschlange.poll());
+                produziereProdukt(nextProdukt);
             }
+            
+            ThreadUtil.sleep(1000);
         }
     }
 
     public void fuegeProduktHinzu(Produkt produkt)
     {
+        System.out.println(name + " hat " + produkt.meinTyp + " erhalten.");
         warteschlange.add(produkt);
-    }
-
-    public void setzteProduktionsZeit(int zeit)
-    {
-        produktionsZeit = zeit;
     }
 
     public void produziereProdukt(Produkt produkt)
     {
-        boolean valid = warteschlange.remove(produkt);
-        if (valid)
+        if (produkt.meinTyp != letztesProdukt)
         {
-            try {
-                Thread.sleep(produktionsZeit * 1000);
-            } catch (InterruptedException e) {
-            }
-            produkt.setZustand("produziert");
+            // wir müssen den roboter umkonfigurieren auf das neue produkt, 1 stunde
+            try 
+            {
+                
+                Thread.sleep(1 * 1000);
+            } 
+            catch (InterruptedException e) {} 
         }
-        else 
+        System.out.println(this.name + " verarbeitet jetzt "  + produkt.meinTyp.toString());
+        // produktionsZeit vom Produkt auslesen mithilfe von produkt.aktuellerProduktionsSchritt
+        // und dem array int[] produktionsDauer > produkt.produktionsdauer[produkt.aktuellerproduktionsSchritt]
+        int produktionsZeit = produkt.produktionsDauer [produkt.aktuellerProduktionsSchritt];
+        // von minuten in stunden umwandeln und als milisekunden für den thread.sleep speichern
+        long produktionsZeitMillisekunden = Math.round(((double)produktionsZeit / 60 * 1000));
+        //System.out.println(this.name + " dauer in millisekunden: "  + produktionsZeitMillisekunden);
+        
+        //produziere das produkt
+        try 
         {
-            System.out.println("Produkt was produziert werden sollte war nicht mehr in der Warteschlange.");
-        }
-    }
+            Thread.sleep(produktionsZeitMillisekunden);
+        } 
+        catch (InterruptedException e) {} 
 
-    public String gibNamen()
-    {
-        return name;
+        produkt.aktuellerProduktionsSchritt += 1;
+        produktionsManager.gibProdukteInProduktion(produkt);
     }
 }
